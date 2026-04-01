@@ -157,3 +157,134 @@ font-family: League Spartan;
     margin-left: 5%; /* subtle offset for composition */
   }
 }
+
+body {
+    margin: 0;
+    background-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.book-section {
+    height: 100vh;
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.book-section > .container {
+    height: 400px;
+    width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2%;
+    margin-bottom: 30px;
+    perspective: 1200px; /* keep perspective for 3D flip */
+    margin-top: 50vh;
+}
+
+.container > .right {
+    position: absolute;
+    height: 100%;
+    width: 100%; /* full width for vertical flip */
+    transition: 0.7s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: top; /* pivot from top for vertical flip */
+}
+
+.right > figure.front,
+.right > figure.back {
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.right > figure.front {
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Back of the page (hidden initially) */
+.right > figure.back {
+    transform: rotateX(-180deg); /* flip “outwards” instead of inwards */
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+}
+
+.flip {
+    transform: rotateX(180deg); /* flip vertically */
+}
+
+.flip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
+}
+
+.book-section > button {
+    border: 2px solid #ef9f00;
+    background-color: transparent;
+    color: #ef9f00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.book-section > button:focus,
+.book-section > button:active {
+    outline: none;
+}
+
+.book-section > button:hover {
+    background-color: #ef9f00;
+    color: #fff;
+}
+
+/* Cover & back-cover styling */
+.front#cover, .back#back-cover {
+    font-family: calibri;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.front#cover h1 {
+    color: #725353;
+}
+
+.front#cover p {
+    color: rgba(0,0,0,0.8);
+    font-size: 14px;
+}
+
+.right > figure.front h1,
+.right > figure.front p {
+    color: black; /* or white depending on background */
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.right > figure.front h1 {
+    font-size: 2rem;
+}
+
+.right > figure.front p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
