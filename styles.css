@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: white;
+  font-family: libre baskerville;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.navbar a{
+  font-size: 2rem;
+  color: white;
+  margin-left: 6rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 4rem 10%;
+}
+
+.home {
+  display: flex;
+  position: relative;
+  gap: 15rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 43%;
+}
+
+.home_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 40% center;
+  z-index: -1;
+}
+h1 {
+  font-size: 11rem;
+  font-family: League Spartan;
+  font-weight: 200;
+}
+h2{
+  font-size: 6.5rem;
+  font-family: libre baskerville;
+  font-weight: 100;
+  margin-top: 3rem;
+}
+.artist_statement {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding: 4rem 10%;
+  font-size: 2rem;
+  line-height: 1.6;
+  z-index: 2;
+  
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 4rem 10%;
+}
+
+.left { /*im centeting this wrong colby...*/
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}
+
+
+
