@@ -97,12 +97,36 @@ h1 {
   font-size: 11rem;
   font-family: League Spartan;
   font-weight: 200;
+  letter-spacing: .3rem;
 }
 h2{
-  font-size: 6.5rem;
+  font-size: 7rem;
   font-family: libre baskerville;
   font-weight: 100;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  letter-spacing: .3rem;
+}
+.hello {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.hello::before {
+    content: "";
+    position: absolute;
+    
+    /* size of rectangle */
+    width: 130%;
+    height: 70%;
+    
+    /* position offset (tweak these) */
+    top: 30px;     /* moves it down */
+    left: -20px;   /* moves it left */
+    
+    /* style */
+    background-color: #BF2929; /* pick your color */
+    z-index: -1;  /* puts it behind text */
 }
 .artist_statement {
   display: flex;
@@ -111,9 +135,10 @@ h2{
   
 }
 
-.intro{
+.intro {
   position: fixed;
-  padding-bottom: 30%; /* play w this a bit more*/
+  padding-bottom: 10%;
+  left: 15vw;   /* responsive to screen width */
   z-index: 0;
 }
 .statement_text {
@@ -242,14 +267,15 @@ font-weight: 500;
 font-family: League Spartan;
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2560px) /* 650 900 1250 */{
   html {
-    font-size: 65%; 
+    font-size: 80%; 
   }
 
   .home-content {
     margin-left: 5%; 
   }
+  /* minw 1000px*/
 }
 
 body {
