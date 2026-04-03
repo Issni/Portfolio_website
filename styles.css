@@ -7,8 +7,14 @@
 }
 
 body {
-  background-color: #1A1A1A;
   color: #FFFFFF;
+  background-color: #aa0a0a;
+}
+
+section {
+  background-color: #1A1A1A;
+  position: relative;
+  z-index: 5;
 }
 
 html {
@@ -60,14 +66,21 @@ section {
   display: flex;
   position: relative;
   gap: 15rem;
+  background-image: url(svgs/home_bg.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
 .home-content {
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
   padding-top: 37%;
+  z-index: -1;
 }
 
 .home_bg {
@@ -92,6 +105,18 @@ h2{
   margin-top: 3rem;
 }
 .artist_statement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  
+}
+
+.intro{
+  position: fixed;
+  padding-bottom: 30%; /* play w this a bit more*/
+  z-index: 0;
+}
+.statement_text {
   position: absolute;
   text-align: center;
   bottom: 0;
@@ -103,7 +128,7 @@ h2{
   line-height: 1.6;
   z-index: 2;
   font-family: libre baskerville;
-  
+
 }
 .demacia_cover {
   position: absolute;
@@ -241,11 +266,12 @@ body {
     width: 100%;
     padding: 40px 0;
     text-align: center;
+    background-color: #1A1A1A;
 }
 
 .book-section > .container {
-    height: 400px;
-    width: 500px;
+    height: 55vw;
+    width: 80vw; /* 80% of screen witdh */
     position: relative;
     left: 50%;
     transform: translateX(-50%);

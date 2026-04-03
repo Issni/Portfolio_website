@@ -21,8 +21,9 @@ function flipPrev() {
 
 
 window.addEventListener('wheel', (e) => {
-    /*if (isFlipping) return;*/
-
+    if (isFlipping) return;
+    /* if currnet page is = to max page then scroll down and if current page is = to frist page then scroll up 
+    (then allow scroll up scroll down)*/
     const delta = e.deltaY; /* y up x down */
 
     if (delta > 0) {
@@ -39,3 +40,4 @@ window.addEventListener('wheel', (e) => {
 }, { passive: false });
 
 /* i think either the front back are overlapping or theres something weird with the z index */
+/* x2 time heig page - after fisrt page inscrase eigh of section - css animation move the content above below up and down
