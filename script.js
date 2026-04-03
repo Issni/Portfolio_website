@@ -1,57 +1,41 @@
 let pages = document.getElementsByClassName("right");
 let currentPage = 0;
 let isFlipping = false;
-
-// Lock scroll when book fits screen
-function initBookLock() {
-    const bookSection = document.querySelector(".book-section");
-    const rect = bookSection.getBoundingClientRect();
-    if (rect.height <= window.innerHeight) {
-        document.body.style.overflow = 'hidden';
-    }
-}
-window.addEventListener('load', initBookLock);
-window.addEventListener('resize', initBookLock);
-
-// Flip to next page
+/* figure out which way scroll= page flip feels most natural */
+/* maybe book always stays open - takes up the whole space without leaving weird gaps */
 function flipNext() {
     if (currentPage < pages.length) {
         pages[currentPage].classList.add("flip");
-        pages[currentPage].style.zIndex = pages.length + 1 - currentPage;
+        pages[currentPage].style.zIndex = pages.length + 1 - currentPage; /* think something wrong here with the page clipping */
         currentPage++;
     }
 }
 
-// Flip to previous page
 function flipPrev() {
     if (currentPage > 0) {
         currentPage--;
         pages[currentPage].classList.remove("flip");
-        pages[currentPage].style.zIndex = pages.length + 1 - currentPage;
+        pages[currentPage].style.zIndex = pages.length + 1 - currentPage; /* same thing as above but only applys to the bottom layer of each page */
     }
 }
 
-// Snap-scroll handler
+
 window.addEventListener('wheel', (e) => {
-    if (isFlipping) return; // prevent rapid flips
+    /*if (isFlipping) return;*/
 
-    const delta = e.deltaY;
+    const delta = e.deltaY; /* y up x down */
 
-    if (delta > 0) { // scroll down -> next page
+    if (delta > 0) {
         isFlipping = true;
         flipNext();
-    } else if (delta < 0) { // scroll up -> previous page
+    } else if (delta < 0) {
         isFlipping = true;
         flipPrev();
     }
 
-    setTimeout(() => { isFlipping = false; }, 800); // duration matches CSS transition
+    setTimeout(() => { isFlipping = false; }, 800);
 
-    e.preventDefault();
+    e.preventDefault(); /* gotta fix the scroll blocking */
 }, { passive: false });
 
-// Optional: allow arrow keys for flipping too
-window.addEventListener('keydown', (e) => {
-    if (e.key === "ArrowDown") flipNext();
-    if (e.key === "ArrowUp") flipPrev();
-});
+/* i think either the front back are overlapping or theres something weird with the z index */

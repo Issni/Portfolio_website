@@ -105,6 +105,23 @@ h2{
   font-family: libre baskerville;
   
 }
+.demacia_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills while preserving ratio */
+  border-radius: 10px;
+  z-index: -1;   /* match page corners */
+}
+.right a {
+  position: absolute;
+  color: white !important;
+  font-family: libre baskerville;
+  font-size: 2rem;
+  z-index: 2;
+}
 .break {
     position: relative;   /* makes section a reference for absolute positioning */
     height: auto;
@@ -156,6 +173,7 @@ display: block;
   font-size: 1.4rem;
   font-weight: 200;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -201,11 +219,11 @@ font-family: League Spartan;
 
 @media (min-width: 2560px) {
   html {
-    font-size: 65%; /* slightly upscale everything */
+    font-size: 65%; 
   }
 
   .home-content {
-    margin-left: 5%; /* subtle offset for composition */
+    margin-left: 5%; 
   }
 }
 
@@ -233,17 +251,17 @@ body {
     transform: translateX(-50%);
     border-radius: 2%;
     margin-bottom: 30px;
-    perspective: 1200px; /* keep perspective for 3D flip */
+    perspective: 1200px; 
     margin-top: 50vh;
 }
 
 .container > .right {
     position: absolute;
     height: 100%;
-    width: 100%; /* full width for vertical flip */
-    transition: 0.7s ease-in-out;
+    width: 100%; 
+    transition: 0.7s ease-in-out, z-index .01s;
     transform-style: preserve-3d;
-    transform-origin: top; /* pivot from top for vertical flip */
+    transform-origin: top; 
 }
 
 .right > figure.front,
@@ -264,14 +282,13 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Back of the page (hidden initially) */
 .right > figure.back {
-    transform: rotateX(-180deg); /* flip “outwards” instead of inwards */
+    transform: rotateX(-180deg); 
     box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
 }
 
 .flip {
-    transform: rotateX(180deg); /* flip vertically */
+    transform: rotateX(180deg); 
 }
 
 .flip::before {
@@ -306,7 +323,7 @@ body {
     color: #fff;
 }
 
-/* Cover & back-cover styling */
+
 .front#cover, .back#back-cover {
     font-family: calibri;
     text-align: left;
@@ -324,7 +341,7 @@ body {
 
 .right > figure.front h1,
 .right > figure.front p {
-    color: black; /* or white depending on background */
+    color: black; 
     position: absolute;
     left: 20px;
     bottom: 20px;
@@ -339,3 +356,5 @@ body {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
+
+/* reminder move the artist statement up  once past the book scroll*/
