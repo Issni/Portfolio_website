@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #FFFFFF;
+  background-color: #fbf0f0;
+}
+
+section {
+  background-color: #1A1A1A;
+  position: relative;
+  z-index: 5;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "im fell";
+  src:
+    url(fonts/IM_Fell_DW_Pica/IM_FELL_DW_Pica.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+  background-color: #1a1a1aab;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: libre baskerville;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6rem;
+}
+.navbar a{
+  display: block;
+  color: white;
+  font-size: 2rem;
+  margin-left: 0;
+}
+.navbar li{
+  position: relative;
+  padding-bottom: 10px;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  list-style: none;
+  padding: 0;
+  min-width: 220px;
+  top: 100%;
+
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  pointer-events: none;
+  left: 50%;
+
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.navbar li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.dropdown-menu li a{
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+}
+.dropdown-menu li a:hover{
+  background: #555;
+}
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container_1 {
+  position: relative;
+  padding: 4rem 6%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+}
+
+.svg1 { grid-column: 1; }
+.svg2 { grid-column: 2; }
+.svg3 { grid-column: 1 / span 2; }
+
+.grid-container_1 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid-container_2 {
+  position: relative;
+  padding: 4rem 6%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+}
+.grid-container_2 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 8rem;
+  background-image: url(svgs/baiyu_cover.svg);
+  background-size: cover;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-top: 37%;
+  z-index: 0;
+}
+h1 {
+  font-size: 6rem;
+  font-family: League Spartan;
+  font-weight: 200;
+  letter-spacing: .3rem;
+}
+h2{
+  font-size: 2rem;
+  font-family: libre baskerville;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  letter-spacing: .3rem;
+}
+.wip{
+    font-size: 2rem;
+    font-family: League Spartan;
+    font-weight: 100;
+}
+.hello {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    font-family: im fell, serif;
+    font-weight: normal;
+}
+
+.artist_statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  
+}
+
+.statement_text {
+text-align: center;
+}
+.full_img{
+  padding-top: 6vh;
+  display: flex;
+  position: relative;
+  gap: 15rem;
+  /*background-attachment: fixed;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.hover{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1acb;
+    font-size: 2rem;
+
+    color: #ffffff;
+    text-align: left;
+    padding: 2rem 27%;
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: League Spartan;
+
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+    z-index: 10;
+    opacity: 0;
+    /*
+    UGLYYY
+    max-height: 20vh; 
+    overflow-y: auto;*/
+  
+
+}
+.hover_container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+.hover_container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hover_container:hover .hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 4rem 10%;
+}
+
+.left { /*im centeting this wrong colby...*/
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}
+
+
+@media screen and (max-width: 768px) {
+  .grid-container_1 {
+    grid-template-columns: 1fr; /* stack top two images */
+  }
+  .svg3 {
+    grid-column: 1; /* full width anyway */
+  }
+}
