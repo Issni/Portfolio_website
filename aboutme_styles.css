@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #FFFFFF;
+  background-color: #3f3737;
+}
+
+section {
+  position: relative;
+  z-index: 5;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "im fell";
+  src:
+    url(fonts/IM_Fell_DW_Pica/IM_FELL_DW_Pica.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+  background-color: #1a1a1aab;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: libre baskerville;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6rem;
+}
+.navbar a{
+  display: block;
+  color: white;
+  font-size: 2rem;
+  margin-left: 0;
+}
+.navbar li{
+  position: relative;
+  padding-bottom: 10px;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #444444cb;
+  list-style: none;
+  padding: 0;
+  min-width: 220px;
+  top: 100%;
+
+  opacity: 0;
+  left: auto;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  pointer-events: none;
+  
+
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.navbar li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown-menu li a{
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a:hover{
+  background: #555;
+}
+.p1{
+  position: relative;
+  min-height: 100vh;
+}
+.home{
+  background-image: url("svgs/about_me_cover.svg");
+  background-size: 100% auto;   
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: red;
+  height: 60vh;
+}
+.artist_statement {
+  background-color: #BF2929;
+  padding: 4rem 10%;
+  height: 40vh;
+}
+.statement_text {
+  position: absolute;
+  text-align: center;
+  margin-top: 10rem;
+  left: 0;
+  width: 100%;
+  padding: 4rem 10%;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: norrmal;
+  font-family: libre baskerville;
+  letter-spacing: 5%;
+}
+.inline{
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5%;
+
+}
+.artist{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.artist img{
+    width: 25vw;
+
+}
+.hello{
+  padding: 4rem 20%;
+  margin-top: 7%;
+  color: #BF2929;
+  font-family: libre baskerville;
+  font-style: italic;
+  font-size: 6rem;
+  font-weight: 100;
+}
+.body_t{
+  padding: 0rem 20%;
+  color: black;
+  font-size: 1.7rem;
+  font-family: "Source Serif 4", serif;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 4rem 10%;
+}
+
+.left { /*im centeting this wrong colby...*/
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}
+
+
+@media screen and (max-width: 768px) {
+  .grid-container_1 {
+    grid-template-columns: 1fr; /* stack top two images */
+  }
+  .svg3 {
+    grid-column: 1; /* full width anyway */
+  }
+}
+
+.exhibitions h2 {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.exhibitions hr {
+  margin-bottom: 15px;
+}
+
+.exhibition-group {
+  display: flex;
+  gap: 20px; /* space between columns */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* allows columns to wrap on small screens */
+}
+
+/* Grid inside each exhibition item for left/right alignment */
+.exhibition {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* left column fixed, right flexible */
+  margin-bottom: 8px;
+  flex: 1 1 200px; /* allow columns to shrink/grow */
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+/* Exhibitions Section Scoped CSS */
+.exhibitions h2 {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.exhibitions hr {
+  margin-bottom: 15px;
+}
+
+/* Each exhibition item uses grid for perfect left/right alignment */
+.exhibitions .exhibition-group {
+  display: flex;
+  gap: 20px; /* space between columns */
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* Each item: fixed left column, flexible right column */
+.exhibitions .exhibition {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* fixed width for left column */
+  align-items: center; /* vertically center text */
+  margin-bottom: 8px;
+  flex: 1 1 200px; /* allow columns to shrink/grow */
+}
+
+/* Date on the left, type on the right */
+.exhibitions .exhibition .left {
+  text-align: left;
+  font-weight: 500;
+}
+
+.exhibitions .exhibition .right {
+  text-align: left; /* left-aligned for consistency, or right if you prefer */
+  font-weight: 400;
+}
+
+/* Make two-column layout for the group align perfectly */
+.exhibitions .exhibition-group > .exhibition {
+  width: 100%; /* ensures all items stretch the same */
+}
+
+/* Responsive: stack left/right vertically on very small screens */
+@media (max-width: 500px) {
+  .exhibitions .exhibition {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+  .exhibitions .exhibition .right {
+    margin-top: 2px;
+    text-align: left;
+  }
+}
+
+/* Responsive adjustment for very small screens */
+@media (max-width: 500px) {
+  .exhibition {
+    grid-template-columns: 1fr; /* stack left and right vertically */
+  }
+  .right {
+    text-align: left;
+    margin-top: 2px;
+  }
+}

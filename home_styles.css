@@ -29,7 +29,7 @@ html {
   top: 0;
   left: 0;
   padding: 4rem 10%;
-  /*background-color: #070707d5;*/
+  background-color: #070707d5;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -61,22 +61,20 @@ html {
   display: block;
   color: white;
   font-size: 2rem;
-  margin-left: 0;
+ 
 }
 .navbar li{
   position: relative;
   padding-bottom: 10px;
 }
-.dropdown-menu {
+.dropdown-menu { /*can i make the text still stick to the underside of concept right while only increaseing size of the background*/
   position: absolute;
   top: 100%;
   right: 0;
   background: #444444cb;
   list-style: none;
-  padding: 0;
-  min-width: 220px;
+  padding: 0px 0px 0px 10px;
   top: 100%;
-
   opacity: 0;
   left: auto;
   transform: translateY(-10px);
@@ -93,6 +91,8 @@ html {
   pointer-events: auto;
 }
 .dropdown-menu li a{
+  margin-top: 10px;
+  text-wrap: nowrap;
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
