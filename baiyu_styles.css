@@ -78,33 +78,32 @@ html {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  background: #444;
+  right: 0;
+  background: #444444cb;
   list-style: none;
   padding: 0;
   min-width: 220px;
   top: 100%;
 
   opacity: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
+  left: auto;
+  transform: translateY(-10px);
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
   pointer-events: none;
-  left: 50%;
+  
 
 
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .navbar li:hover .dropdown-menu {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
   pointer-events: auto;
 }
 .dropdown-menu li a{
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
-  padding: 10px 0px;
 }
 .dropdown-menu li a:hover{
   background: #555;
