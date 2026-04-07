@@ -8,7 +8,7 @@
 
 body {
   color: #FFFFFF;
-  background-color: #3f3737;
+  background-color: #F9EEEE;
 }
 
 section {
@@ -82,7 +82,6 @@ html {
   list-style: none;
   padding: 0;
   min-width: 220px;
-  top: 100%;
 
   opacity: 0;
   left: auto;
@@ -134,7 +133,7 @@ html {
   padding: 4rem 10%;
   font-size: 1.8rem;
   line-height: 1.6;
-  font-weight: norrmal;
+  font-weight: normal;
   font-family: libre baskerville;
   letter-spacing: 5%;
 }
@@ -154,6 +153,12 @@ html {
 .artist img{
     width: 25vw;
 
+}
+.paragraph_about{
+  margin-bottom: 7%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 10rem;
 }
 .hello{
   padding: 4rem 20%;
@@ -182,7 +187,7 @@ html {
   padding: 4rem 10%;
 }
 
-.left { /*im centeting this wrong colby...*/
+.footer-left {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -221,93 +226,71 @@ font-family: League Spartan;
   .svg3 {
     grid-column: 1; /* full width anyway */
   }
-}
 
-.exhibitions h2 {
+}
+.exhibition_title {
   text-align: left;
-  margin-bottom: 5px;
 }
-
-.exhibitions hr {
-  margin-bottom: 15px;
-}
-
-.exhibition-group {
-  display: flex;
-  gap: 20px; /* space between columns */
-  margin-bottom: 15px;
-  flex-wrap: wrap; /* allows columns to wrap on small screens */
-}
-
-/* Grid inside each exhibition item for left/right alignment */
-.exhibition {
+.exhibition_title .exhibition-grid {
   display: grid;
-  grid-template-columns: 80px 1fr; /* left column fixed, right flexible */
-  margin-bottom: 8px;
-  flex: 1 1 200px; /* allow columns to shrink/grow */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 40px 150px; /* row gap / column gap */
+  max-width: 1200px;   /* caps width on large screens */
+  width: 100%;        /* allows shrinking */
+  margin: 0 auto;     /* centers */
+  padding: 0 20px; 
 }
 
-.left {
+.exhibition_title h2{
+  font-family: League Spartan;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: ;
+  color: #BF2929;
+  padding: 0rem 13%;
+
+}
+.exhibition_title hr {
+  margin: .5% 10% 5% 10%; /* top right bottom left */
+  border: none;        /* remove default border */
+  height: 2px;         /* thickness */
+  background-color: #BF2929; /* color */
+}
+.exhibition_title .left {
   text-align: left;
 }
 
-.right {
-  text-align: right;
-}
-/* Exhibitions Section Scoped CSS */
-.exhibitions h2 {
+.exhibition_title .right {
   text-align: left;
-  margin-bottom: 5px;
 }
 
-.exhibitions hr {
-  margin-bottom: 15px;
-}
 
-/* Each exhibition item uses grid for perfect left/right alignment */
-.exhibitions .exhibition-group {
+.exhibition_title .exhibition-group {
   display: flex;
-  gap: 20px; /* space between columns */
+  gap: 20px;
   margin-bottom: 15px;
+  padding: 0rem 15%;
+
   flex-wrap: wrap;
 }
-
-/* Each item: fixed left column, flexible right column */
-.exhibitions .exhibition {
+.exhibition_title .exhibition {
   display: grid;
-  grid-template-columns: 100px 1fr; /* fixed width for left column */
-  align-items: center; /* vertically center text */
-  margin-bottom: 8px;
-  flex: 1 1 200px; /* allow columns to shrink/grow */
-}
-
-/* Date on the left, type on the right */
-.exhibitions .exhibition .left {
-  text-align: left;
-  font-weight: 500;
-}
-
-.exhibitions .exhibition .right {
-  text-align: left; /* left-aligned for consistency, or right if you prefer */
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  font-family: libre baskerville;
+  font-size: 1.5rem;
   font-weight: 400;
+  color: #BF2929;
+  column-gap: 12rem;
 }
 
-/* Make two-column layout for the group align perfectly */
-.exhibitions .exhibition-group > .exhibition {
-  width: 100%; /* ensures all items stretch the same */
-}
 
-/* Responsive: stack left/right vertically on very small screens */
-@media (max-width: 500px) {
-  .exhibitions .exhibition {
-    grid-template-columns: 1fr; /* stack vertically */
-  }
-  .exhibitions .exhibition .right {
-    margin-top: 2px;
-    text-align: left;
+
+@media (max-width: 600px) {
+  .exhibition_title .exhibition-grid {
+    grid-template-columns: 1fr;
   }
 }
-
 /* Responsive adjustment for very small screens */
 @media (max-width: 500px) {
   .exhibition {
@@ -316,5 +299,20 @@ font-family: League Spartan;
   .right {
     text-align: left;
     margin-top: 2px;
+  }
+}
+/* Limit artist image size on very large screens */
+@media (min-width: 2000px) {
+  .artist img {
+    width: 20vw; /* smaller than 25vw for big screens */
+    max-height: 70vh; /* ensures it doesn’t cover the statement text */
+  }
+}
+/* Slightly larger font on bigger screens without stretching lines too much */
+@media (min-width: 2000px) {
+  .paragraph_about {
+    font-size: 2rem;
+    max-width: 2000px;
+    margin: 0 auto;
   }
 }
