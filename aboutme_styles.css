@@ -275,16 +275,91 @@ font-family: League Spartan;
 }
 .exhibition_title .exhibition {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 8rem 1fr; /* fix left column width (date) */
   align-items: baseline;
   font-family: libre baskerville;
   font-size: 1.5rem;
   font-weight: 400;
   color: #BF2929;
-  column-gap: 12rem;
+  column-gap: 4rem; /* small gap between date and name */
 }
 
+.publications{
+  margin-top: 10rem;
+}
+.signup_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 80px 0px;
+  max-width: 1400px;
+  width: 100%;
+  
+}
+.ppp{
+display: block;
+ max-width: 100%;
+ height: auto;
+}
+.newsletter h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: League Spartan;
+  color: #1A1A1A;
+}
+.newsletter h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: libre baskerville;
+  color: #aa0a0a;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.work{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: rgba(198, 182, 212, 0);
+  margin: 0 auto;
+  width: 100%;
+  padding: 4rem 10%;
+  gap: 10rem;
+  padding-top: 20rem;
 
+}
+.work_call{
+  flex-wrap: nowrap;
+  font-family: 'League Spartan';
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: #BF2929;
+}
+.work_link h3 {
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Source Serif 4", serif;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+.work_link h4{
+  color: #BF2929;
+  font-size: 2rem;
+  font-family: libre baskerville;
+  font-weight: 500;
+}
 
 @media (max-width: 600px) {
   .exhibition_title .exhibition-grid {
@@ -314,5 +389,10 @@ font-family: League Spartan;
     font-size: 2rem;
     max-width: 2000px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 2000px) {
+  .exhibition_title {
+    padding: 0 20%;
   }
 }
