@@ -291,7 +291,7 @@ font-family: League Spartan;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 20rem 10%;
   margin: 0;
 }
 .newsletter {
@@ -305,24 +305,62 @@ font-family: League Spartan;
   
 }
 .ppp{
-display: block;
+ display: block;
  max-width: 100%;
  height: auto;
+ padding-bottom: 4rem;
 }
 .newsletter h2{
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
   font-family: League Spartan;
   color: #1A1A1A;
 }
 .newsletter h3 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
   font-family: libre baskerville;
   color: #aa0a0a;
   font-style: italic;
   font-size: 1.4rem;
   font-weight: 200;
+}
+.signup_container form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.input-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 2.2rem;
+  font-size: 1.5rem;
+  border: 1px solid #A19494;
+}
+
+.signup_container button {
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+  border: 1px solid #BF2929;
+  background-color: white;
+  color: #BF2929;
+  cursor: pointer;
+  font-family: Libre Baskerville;
+}
+
+.signup_container button:hover {
+  background-color: #f7f7f7;
 }
 .work{
   display: flex;
@@ -333,9 +371,9 @@ display: block;
   background-color: rgba(198, 182, 212, 0);
   margin: 0 auto;
   width: 100%;
-  padding: 4rem 10%;
+  padding: 20rem 10% 0rem 10%;
   gap: 10rem;
-  padding-top: 20rem;
+ 
 
 }
 .work_call{
