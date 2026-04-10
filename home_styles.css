@@ -1,3 +1,4 @@
+/*header issue where the 10px is causing the whole thing to be lifted*/
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +15,6 @@ body {
 section {
   background-color: #1A1A1A;
   position: relative;
-  z-index: 5;
 }
 
 html {
@@ -65,25 +65,22 @@ html {
 }
 .navbar li{
   position: relative;
-  padding-bottom: 10px;
+  
 }
-.dropdown-menu { /*can i make the text still stick to the underside of concept right while only increaseing size of the background*/
+.dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px); /* i gotta use this more this is cool */
   right: 0;
+
   background: #444444cb;
   list-style: none;
+
   padding: 0px 0px 0px 10px;
-  top: 100%;
+
   opacity: 0;
-  left: auto;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
   pointer-events: none;
-  
-
-
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .navbar li:hover .dropdown-menu {
   opacity: 1;
@@ -159,18 +156,12 @@ h2{
 .hello::before {
     content: "";
     position: absolute;
-    
-    /* size of rectangle */
     width: 130%;
     height: 70%;
-    
-    /* position offset (tweak these) */
-    top: 30px;     /* moves it down */
-    left: -20px;   /* moves it left */
-    
-    /* style */
-    background-color: #BF2929; /* pick your color */
-    z-index: -1;  /* puts it behind text */
+    top: 30px;     /* move down */
+    left: -20px;   /* move left */
+    background-color: #BF2929; 
+    z-index: -1;  
 }
 .artist_statement {
   display: flex;
@@ -214,7 +205,7 @@ h2{
   color: white !important;
   font-family: libre baskerville;
   font-size: 2rem;
-  z-index: 2;
+  
 }
 .break {
     position: relative;   /* makes section a reference for absolute positioning */
@@ -234,7 +225,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 20rem 10%;
   margin: 0;
 }
 .newsletter {
@@ -242,30 +233,75 @@ h2{
   flex-direction: column;
   align-items: center;
   background-color: #FFFFFF;
-  padding: 80px 0px;
+  padding: 80px 40px;
   max-width: 1400px;
   width: 100%;
-  
+}
+
+.signup_container form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
 }
 .ppp{
-display: block;
+ display: block;
  max-width: 100%;
  height: auto;
+ padding-bottom: 4rem;
 }
 .newsletter h2{
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
   font-family: League Spartan;
   color: #1A1A1A;
 }
 .newsletter h3 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
   font-family: libre baskerville;
   color: #aa0a0a;
   font-style: italic;
   font-size: 1.4rem;
   font-weight: 200;
+}
+.signup_container form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.input-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 2.2rem;
+  font-size: 1.5rem;
+  border: 1px solid #A19494;
+}
+
+.signup_container button {
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+  border: 1px solid #BF2929;
+  background-color: white;
+  color: #BF2929;
+  cursor: pointer;
+  font-family: Libre Baskerville;
+}
+
+.signup_container button:hover {
+  background-color: #f7f7f7;
 }
 
 .footer {
@@ -294,8 +330,17 @@ display: block;
   font-weight: Regular;
   font-size: 5rem;
   opacity: 1;
+  cursor: pointer;
+  
+}
+.text:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
+.home {
+  scroll-margin-top: 120px;
+}
 .icon_links {
   display: flex;
   justify-content: space-between;
@@ -332,33 +377,46 @@ body {
 }
 
 .book-section {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
     padding: 40px 0;
     text-align: center;
     background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: padding-top 0.7s ease-in-out;
 }
-
+.book-section.page-open {
+    padding-top: 50vh;
+}
 .book-section > .container {
-    height: 55vw;
-    width: 80vw; /* 80% of screen witdh */
+    height: 50vw;
+    width: 70vw;
+    max-width: 900px;
+    max-height: 600px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 2%;
     margin-bottom: 30px;
-    perspective: 1200px; 
-    margin-top: 50vh;
+    perspective: 1200px;
+    margin-top: 15vh;
 }
 
-.container > .right {
+
+.book-section .container .right {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width: 100%; 
-    transition: 0.7s ease-in-out, z-index .01s;
     transform-style: preserve-3d;
-    transform-origin: top; 
+    transform-origin: top;
+    transition: transform 0.7s ease-in-out;
+    /*isolation: isolate; /*forces page to be its own group* didnt really work*/
 }
+    
 
 .right > figure.front,
 .right > figure.back {
@@ -374,7 +432,6 @@ body {
 }
 
 .right > figure.front {
-    z-index: 2;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
@@ -382,19 +439,26 @@ body {
     transform: rotateX(-180deg); 
     box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
 }
-
+.page-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .flip {
     transform: rotateX(180deg); 
 }
 
 .flip::before {
+    pointer-events: none;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
 }
 
@@ -452,5 +516,14 @@ body {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
-
+/*flex position sketchbook in center - set heigh to be the height you want (ie 80 60 %) 
+when transition into p1 change to height to 100% then set transition to the height so secitono above will grow*/
 /* reminder move the artist statement up  once past the book scroll*/
+/* Responsive for larger screens */
+@media (min-width: 2560px) {
+    .book-section > .container {
+        height: 55vw;
+        width: 75vw;
+        max-height: 700px;
+    }
+}

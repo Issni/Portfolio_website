@@ -1,3 +1,4 @@
+/*filter overlay someting something darkern*/
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,15 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+html, body {
+  height: 100%;
 
+}
 body {
   color: #FFFFFF;
   background-color: #F9EEEE;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -31,10 +37,11 @@ html {
 .header {
   display: flex;
   position: fixed;
+  height: 120px;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 4rem 10%;
+  padding: 3.5rem 10%;
   /*background-color: #070707d5;*/
   justify-content: space-between;
   align-items: center;
@@ -63,21 +70,34 @@ html {
   display: flex;
   padding: 0;
   gap: 6rem;
+  justify-content: center;
+}
+nav {
+height: 100%;
+display: flex;
 }
 .navbar a{
   display: block;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-left: 0;
+  height: 100%;
 }
 .navbar li{
   position: relative;
-  padding-bottom: 10px;
+  height: 100%;
+
 }
-.dropdown-menu {
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
+.dropdown-menu { /*verticaly center nav and dropdown */
+  
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: calc(100% + 3.5rem);
+  
+  right: -1rem;
   background: #444444cb;
   list-style: none;
   padding: 0;
@@ -123,19 +143,24 @@ html {
   background-color: #BF2929;
   padding: 4rem 10%;
   height: 40vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .statement_text {
-  position: absolute;
+  position: relative;
   text-align: center;
-  margin-top: 10rem;
-  left: 0;
+  margin-top: 0;
+  left: auto;
   width: 100%;
-  padding: 4rem 10%;
+  padding: 0 10%;
   font-size: 1.8rem;
   line-height: 1.6;
   font-weight: normal;
   font-family: libre baskerville;
   letter-spacing: 5%;
+  z-index: 15;
 }
 .inline{
   font-size: 2rem;
@@ -144,14 +169,16 @@ html {
 
 }
 .artist{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
 }
 .artist img{
     width: 25vw;
+    max-width: 400px;
 
 }
 .paragraph_about{
@@ -185,6 +212,7 @@ html {
   bottom: 0;
   left: 0;
   padding: 4rem 10%;
+  margin-top: auto;
 }
 
 .footer-left {
@@ -224,7 +252,7 @@ font-family: League Spartan;
     grid-template-columns: 1fr; /* stack top two images */
   }
   .svg3 {
-    grid-column: 1; /* full width anyway */
+    grid-column: 1; 
   }
 
 }
@@ -233,11 +261,11 @@ font-family: League Spartan;
 }
 .exhibition_title .exhibition-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 40px 150px; /* row gap / column gap */
-  max-width: 1200px;   /* caps width on large screens */
-  width: 100%;        /* allows shrinking */
-  margin: 0 auto;     /* centers */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px 150px; 
+  max-width: 1200px;   
+  width: 100%;        
+  margin: 0 auto;     
   padding: 0 20px; 
 }
 
@@ -245,16 +273,15 @@ font-family: League Spartan;
   font-family: League Spartan;
   font-size: 4rem;
   font-weight: 600;
-  letter-spacing: ;
   color: #BF2929;
   padding: 0rem 13%;
 
 }
 .exhibition_title hr {
-  margin: .5% 10% 5% 10%; /* top right bottom left */
-  border: none;        /* remove default border */
-  height: 2px;         /* thickness */
-  background-color: #BF2929; /* color */
+  margin: .5% 10% 5% 10%; 
+  border: none;       
+  height: 2px;        
+  background-color: #BF2929; 
 }
 .exhibition_title .left {
   text-align: left;
@@ -275,13 +302,13 @@ font-family: League Spartan;
 }
 .exhibition_title .exhibition {
   display: grid;
-  grid-template-columns: 8rem 1fr; /* fix left column width (date) */
+  grid-template-columns: 8rem 1fr; 
   align-items: baseline;
   font-family: libre baskerville;
   font-size: 1.5rem;
   font-weight: 400;
   color: #BF2929;
-  column-gap: 4rem; /* small gap between date and name */
+  column-gap: 4rem; 
 }
 
 .publications{
@@ -299,10 +326,17 @@ font-family: League Spartan;
   flex-direction: column;
   align-items: center;
   background-color: #FFFFFF;
-  padding: 80px 0px;
+  padding: 80px 40px;
   max-width: 1400px;
   width: 100%;
-  
+}
+
+.signup_container form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
 }
 .ppp{
  display: block;
@@ -379,49 +413,57 @@ font-family: League Spartan;
 .work_call{
   flex-wrap: nowrap;
   font-family: 'League Spartan';
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 700;
   letter-spacing: .1rem;
   color: #BF2929;
 }
 .work_link h3 {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: "Source Serif 4", serif;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 2rem;
   max-width: 500px;
 }
-.work_link h4{
+.work_link_email {
+  display: block;
   color: #BF2929;
   font-size: 2rem;
   font-family: libre baskerville;
   font-weight: 500;
+  text-decoration: none;
 }
 
+.work_link_email:hover {
+  text-decoration: underline;
+}
+@media (min-width: 1800px) {
+  .home {
+    height: 60vh;
+  }
+}
 @media (max-width: 600px) {
   .exhibition_title .exhibition-grid {
     grid-template-columns: 1fr;
   }
 }
-/* Responsive adjustment for very small screens */
 @media (max-width: 500px) {
   .exhibition {
-    grid-template-columns: 1fr; /* stack left and right vertically */
+    grid-template-columns: 1fr;
   }
   .right {
     text-align: left;
     margin-top: 2px;
   }
 }
-/* Limit artist image size on very large screens */
 @media (min-width: 2000px) {
   .artist img {
-    width: 20vw; /* smaller than 25vw for big screens */
-    max-height: 70vh; /* ensures it doesn’t cover the statement text */
+    width: 20vw;
+    max-width: 600px;
   }
 }
-/* Slightly larger font on bigger screens without stretching lines too much */
+
 @media (min-width: 2000px) {
   .paragraph_about {
     font-size: 2rem;
@@ -432,5 +474,51 @@ font-family: League Spartan;
 @media (min-width: 2000px) {
   .exhibition_title {
     padding: 0 20%;
+    
   }
 }
+@media (min-width: 1800px) {
+  .artist_statement {
+    padding: 4rem 10%;
+    height: 40vh;
+  }
+
+  .statement_text {
+    font-size: 2.4rem;
+    line-height: 1.9;
+    padding: 0 15%;
+    margin-top: -2rem;
+  }
+
+  .inline {
+    font-size: 3rem;
+  }
+
+  .artist {
+    top: 50%;
+  }
+
+  .artist img {
+    width: 25vw;
+    max-width: 600px;
+  }
+}
+@media (min-width: 1800px) {
+  .body_t {
+    font-size: 1.9rem;
+    padding: 4rem 22%;
+  }
+}
+@media (min-width: 1800px) {
+  .hello {
+    
+    padding: 4rem 22%;
+  }
+}
+@media (min-width: 1800px) {
+  .contact a {
+    
+    font-size: 2.4rem;
+  }
+}
+
