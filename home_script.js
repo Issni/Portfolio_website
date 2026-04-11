@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentPage = 0;
 
-    //page 1 top rest under that
+   
     pages.forEach((page, i) => {
         page.style.zIndex = pages.length - i;
     });
@@ -14,61 +14,53 @@ document.addEventListener("DOMContentLoaded", () => {
     let isFlipping = false;
 
     function flipNext() {
-    if (currentPage >= pages.length - 1 || isFlipping) return;
+        if (currentPage >= pages.length - 1 || isFlipping) return;
 
-    isFlipping = true;
+        isFlipping = true;
 
-    // 👉 trigger expansion when opening first page
-    //if (currentPage === 0) {
-    //    bookSection.classList.add("page-open");
-    //}
+        const page = pages[currentPage];
+        page.style.zIndex = pages.length + 10;
+        page.classList.add("flip");
 
-    const page = pages[currentPage];
-    page.style.zIndex = pages.length + 10;
-    page.classList.add("flip");
+        currentPage++;
 
-    currentPage++;
-
-    page.addEventListener('transitionend', function handler() {
-        page.style.zIndex = pages.length - currentPage;
-        isFlipping = false;
-        page.removeEventListener('transitionend', handler);
-    });
-}
+        page.addEventListener('transitionend', function handler() {
+            page.style.zIndex = pages.length - currentPage;
+            isFlipping = false;
+            page.removeEventListener('transitionend', handler);
+        });
+    }
 
     function flipPrev() {
-    if (currentPage <= 0 || isFlipping) return;
+       
+        if (currentPage <= 1 || isFlipping) return;
 
-    isFlipping = true;
+        isFlipping = true;
 
-    currentPage--;
-    const page = pages[currentPage];
+        currentPage--;
+        const page = pages[currentPage];
 
-    page.style.zIndex = pages.length + 10;
-    page.classList.remove("flip");
+        page.style.zIndex = pages.length + 10;
+        page.classList.remove("flip");
 
-    //if (currentPage === 0) {
-    ///    bookSection.classList.remove("page-open");
-    //}
+        page.addEventListener('transitionend', function handler(e) {
+            if (e.propertyName !== 'transform') return;
 
-    page.addEventListener('transitionend', function handler(e) { // listens to transition in css has transitioned - then continute otherwize wait for transition
-        if (e.propertyName !== 'transform') return; // match your CSS
+            page.style.zIndex = pages.length - currentPage;
+            isFlipping = false;
 
-        page.style.zIndex = pages.length - currentPage;
-        isFlipping = false;
+            page.removeEventListener('transitionend', handler);
+        });
+    }
 
-        page.removeEventListener('transitionend', handler);
-    });
-}
-    
-    setTimeout(() => {
-        flipNext();
-    }, 100);
+  
+    pages[0].classList.add("flip");
+    currentPage = 1;
 
     book.addEventListener("wheel", (e) => {
         e.preventDefault();
 
-        if (e.deltaY > 0) { //>0 p down <0 p up
+        if (e.deltaY > 0) {
             flipNext();
         } else {
             flipPrev();

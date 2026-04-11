@@ -173,7 +173,7 @@ h2{
 .intro {
   position: fixed;
   padding-bottom: 10%;
-  left: 15vw;   /* responsive to screen width */
+  left: 15vw;   
   z-index: 0;
 }
 .statement_text {
@@ -196,9 +196,9 @@ h2{
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* fills while preserving ratio */
+  object-fit: cover;    
   border-radius: 10px;
-  z-index: -1;   /* match page corners */
+  z-index: -1;  
 }
 .right a {
   position: absolute;
@@ -208,7 +208,7 @@ h2{
   
 }
 .break {
-    position: relative;   /* makes section a reference for absolute positioning */
+    position: relative;   
     height: auto;
     padding: 0;
     min-height: unset;
@@ -217,7 +217,7 @@ h2{
 .breaker_img {
     position: relative;
     display: block;
-    width: 100vw;         /* full viewport width */
+    width: 100vw;         
     height: auto;         
 }
 .signup_container{
@@ -382,14 +382,26 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    overflow: visible; /* important */
-
-    display: block; /* no flex needed now */
+    overflow: visible; 
+    z-index: 2;
+    display: block; 
     transition: height 0.7s ease-in-out;
 }
 
-.book-section.page-open {
-    
+.notebook {
+  position: relative;
+}
+.base_img {
+  position: absolute;
+  top: 51.2%;
+  left: 47.2%;
+  transform: translate(-50%, -50%);
+
+  width: 79vw;        
+  max-width: 1500px;
+
+  z-index: 1;         
+  pointer-events: none;
 }
 .book-section > .container {
     height: 50vw;
@@ -427,7 +439,7 @@ body {
     backface-visibility: hidden;
     background-size: cover;
     background-position: center;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 60px 60px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 .right > figure.back {
@@ -438,7 +450,7 @@ body {
     backface-visibility: hidden;
     background-size: cover;
     background-position: center;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 60px 60px 0px 0px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 
@@ -547,10 +559,31 @@ body {
 when transition into p1 change to height to 100% then set transition to the height so secitono above will grow*/
 /* reminder move the artist statement up  once past the book scroll*/
 /* Responsive for larger screens */
-@media (min-width: 2560px) {
-    .book-section > .container {
-        height: 55vw;
-        width: 75vw;
-        max-height: 700px;
-    }
+@media (min-width: 2560px) /* 650 900 1250 */{
+ .book-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+    width: 100%;
+    overflow: visible; 
+    z-index: 2;
+    display: block; 
+    transition: height 0.7s ease-in-out;
+}
+  .book-section > .container {
+    height: 50vw;
+    width: 70vw;
+    max-width: 1100px;
+    max-height: 740px;
+    position: relative;
+    top: 48%;
+    left: 49%;
+    /* transform: translate(-50%, -50%); */
+    border-radius: 2%;
+    /* padding: 0 10% 30% 0%; */
+    /* margin-top: 65rem; */
+    perspective: 1200px;
+}
 }
