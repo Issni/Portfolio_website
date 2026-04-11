@@ -11,12 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
         page.style.zIndex = pages.length - i;
     });
 
-let isFlipping = false;
+    let isFlipping = false;
 
     function flipNext() {
     if (currentPage >= pages.length - 1 || isFlipping) return;
 
     isFlipping = true;
+
+    // 👉 trigger expansion when opening first page
+    //if (currentPage === 0) {
+    //    bookSection.classList.add("page-open");
+    //}
 
     const page = pages[currentPage];
     page.style.zIndex = pages.length + 10;
@@ -42,9 +47,9 @@ let isFlipping = false;
     page.style.zIndex = pages.length + 10;
     page.classList.remove("flip");
 
-    if (currentPage === 0) {
-        bookSection.classList.remove("page-open");
-    }
+    //if (currentPage === 0) {
+    ///    bookSection.classList.remove("page-open");
+    //}
 
     page.addEventListener('transitionend', function handler(e) { // listens to transition in css has transitioned - then continute otherwize wait for transition
         if (e.propertyName !== 'transform') return; // match your CSS
@@ -56,9 +61,9 @@ let isFlipping = false;
     });
 }
     
-    //setTimeout(() => {
-     //   flipNext();
-    //}, 100);
+    setTimeout(() => {
+        flipNext();
+    }, 100);
 
     book.addEventListener("wheel", (e) => {
         e.preventDefault();

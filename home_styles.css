@@ -210,22 +210,21 @@ h2{
 .break {
     position: relative;   /* makes section a reference for absolute positioning */
     height: auto;
+    padding: 0;
+    min-height: unset;
 }
 
 .breaker_img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    display: block;
     width: 100vw;         /* full viewport width */
     height: auto;         
-    margin: 0;
-    padding: 0;
 }
 .signup_container{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem 10%;
+  padding: 20rem 10% 10rem 10%;
   margin: 0;
 }
 .newsletter {
@@ -377,20 +376,20 @@ body {
 }
 
 .book-section {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-    background-color: #1A1A1A;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: padding-top 0.7s ease-in-out;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: visible; /* important */
+
+    display: block; /* no flex needed now */
+    transition: height 0.7s ease-in-out;
 }
+
 .book-section.page-open {
-    padding-top: 50vh;
+    
 }
 .book-section > .container {
     height: 50vw;
@@ -398,10 +397,12 @@ body {
     max-width: 900px;
     max-height: 600px;
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 2%;
-    margin-bottom: 30px;
+    margin-top: 66.9rem;
     perspective: 1200px;
-    margin-top: 15vh;
 }
 
 
@@ -418,7 +419,17 @@ body {
 }
     
 
-.right > figure.front,
+.right > figure.front {
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
 .right > figure.back {
     background-color: #FFFFFF;
     position: absolute;
@@ -427,7 +438,7 @@ body {
     backface-visibility: hidden;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 
@@ -439,13 +450,29 @@ body {
     transform: rotateX(-180deg); 
     box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
 }
+.container {
+  position: relative;
+}
+
 .page-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+  ellipse at center,
+  black 65%,
+  rgba(0,0,0,0.3) 80%,
+  transparent 100%
+);
 }
 .flip {
     transform: rotateX(180deg); 
