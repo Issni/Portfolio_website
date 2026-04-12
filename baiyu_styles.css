@@ -32,10 +32,11 @@ html {
 .header {
   display: flex;
   position: fixed;
+  height: 120px;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 4rem 10%;
+  padding: 3.5rem 10%;
   /*background-color: #070707d5;*/
   justify-content: space-between;
   align-items: center;
@@ -64,31 +65,78 @@ html {
   display: flex;
   padding: 0;
   gap: 6rem;
+  justify-content: center;
 }
-.navbar a{
-  display: block;
+nav {
+height: 100%;
+display: flex;
+}
+.navbar > li > a {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-left: 0;
+  height: 100%;
+  text-align: center;
+}
+.dropdown-menu li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              /* start from right */
+  width: 0%;             /* hidden initially */
+  height: 100%;
+  background: #5a5050d3;
+  z-index: -1;
+
+  transition: width 0.3s ease;
+}
+.dropdown-menu li a:hover::before {
+  width: 100%;           /* expands left */
+
 }
 .navbar li{
   position: relative;
-  padding-bottom: 10px;
+  height: 100%;
+
 }
-.dropdown-menu {
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
+.dropdown-menu { /*verticaly center nav and dropdown */
+  
   position: absolute;
-  top: 100%;
-  right: 0;
-  background: #444444cb;
+  top: 100%;          /* directly under the li */
+  right: -1rem;
+  background: #423838ea;
   list-style: none;
   padding: 0;
   min-width: 220px;
-  top: 100%;
+
   opacity: 0;
   left: auto;
   transform: translateY(-10px);
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
   pointer-events: none;
+  
+
+
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .navbar li:hover .dropdown-menu {
@@ -100,9 +148,6 @@ html {
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
-}
-.dropdown-menu li a:hover{
-  background: #555;
 }
 img{
     display: block;
@@ -259,14 +304,15 @@ text-align: center;
   background: rgba(19,19,19,1);
   bottom: 0;
   left: 0;
-  padding: 4rem 10%;
+  padding: 5rem 10%;
+  margin-top: auto;
 }
 
-.left { /*im centeting this wrong colby...*/
+.footer-left {
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   gap: 2rem;
 }
 
@@ -284,7 +330,11 @@ text-align: center;
   width: 155px;
   height: 27px;
 }
-
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
 .contact a{  
 font-size: 1.8rem;
 color: white;
@@ -292,6 +342,7 @@ margin-left: 4rem;
 font-weight: 500;
 font-family: League Spartan;
 }
+
 
 
 @media screen and (max-width: 768px) {
