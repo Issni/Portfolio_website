@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #FFFFFF;
+  /* background-color: #aa0a0a; */
+}
+
+section {
+  background-color: #1A1A1A;
+  position: relative;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "magicial game";
+  src: url("fonts/magicial_game/magicial_game.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+.header {
+  display: flex;
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 3.5rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+  background-color: #1a1a1aab;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: libre baskerville;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6rem;
+  justify-content: center;
+}
+nav {
+height: 100%;
+display: flex;
+}
+.navbar > li > a {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  text-align: center;
+}
+.dropdown-menu li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              /* start from right */
+  width: 0%;             /* hidden initially */
+  height: 100%;
+  background: #a82a2ad3;
+  z-index: -1;
+
+  transition: width 0.3s ease;
+}
+.dropdown-menu li a:hover::before {
+  width: 100%;           /* expands left */
+
+}
+.navbar li{
+  position: relative;
+  height: 100%;
+
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
+.dropdown-menu { /*verticaly center nav and dropdown */
+  
+  position: absolute;
+  top: 100%;          /* directly under the li */
+  right: -1rem;
+  background: #2b2b2bd3;
+  list-style: none;
+  padding: 0;
+  min-width: 220px;
+
+  opacity: 0;
+  left: auto;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  pointer-events: none;
+  
+
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.navbar li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown-menu li a{
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a:hover{
+  /* background: #c51919b2; */
+}
+
+
+
+
+.landing_text {
+  max-width: 600px;
+  text-align: center;
+}
+.landing {
+ display: flex;
+  position: relative;
+  background-image: url(svgs/frieren_landing_bg.svg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  z-index: 0;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  height: 100vh;
+}
+.title p {
+  font-family: "magicial game", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0.08em;
+}
+.landing_text {
+  max-width: 600px;
+  text-align: center;
+}
+
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 5rem 10%;
+  margin-top: auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* margin-top: 2rem; */
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}

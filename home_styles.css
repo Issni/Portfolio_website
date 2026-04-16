@@ -620,7 +620,7 @@ body {
 /*flex position sketchbook in center - set heigh to be the height you want (ie 80 60 %) 
 when transition into p1 change to height to 100% then set transition to the height so secitono above will grow*/
 /* reminder move the artist statement up  once past the book scroll*/
-/* Responsive for larger screens */
+/* Responsive for larger screens */ /*32inch monintnro my laptop is 1920 32inch is 3840*/
 @media (min-width: 2560px) /* 650 900 1250 */{
  
  .book-section {
