@@ -27,6 +27,7 @@ html {
     font-style: normal;
     font-weight: normal;
 }
+
 .header {
   display: flex;
   position: fixed;
@@ -147,9 +148,7 @@ display: flex;
   text-align: right;
   font-size: 1.5rem;
 }
-.dropdown-menu li a:hover{
-  /* background: #c51919b2; */
-}
+
 
 
 
@@ -327,7 +326,124 @@ padding: 15rem 0rem;
   transform: translateX(0);
   opacity: 1;
 }
+.swiper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
+  overflow: visible;
+  
+}
 
+.swiper-slide {
+  width: auto;
+  flex-shrink: 0; 
+  height: 700px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: none;
+  /* margin-bottom: 5%; */
+}
+
+.swiper-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #473e3e;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.swiper-slide.swiper-slide-active {
+  z-index: 10;
+}
+
+.swiper-slide.swiper-slide-active::after {
+  opacity: 0;
+}
+
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-next {
+  z-index: 5;
+}
+
+.swiper-slide.swiper-slide-prev::after,
+.swiper-slide.swiper-slide-next::after {
+  opacity: 0.5;
+}
+
+.swiper-slide img {
+  width: auto !important;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: rgba(0,0,0,0.3);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+.swiper-pagination {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.swiper-pagination-bullet {
+    background: #232323;
+    opacity: 0.3;
+    width: 8px;
+    height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #BF2929;
+    opacity: 1;
+}
+.r1, .r2 {
+    display: flex;
+    margin: 0 auto 3rem;
+}
+
+.r1 {
+    
+    height: 70vh;
+    gap: 2%;
+    padding: 0 10%;
+}
+
+.r2 {
+    padding: 0 10%;
+    height: 80vh;
+    gap: 2%;
+}
+
+.photo {
+    flex: 0 0 49%;
+    overflow: hidden;
+}
+
+.photo2 {
+    flex: 1;
+    overflow: hidden;
+}
+
+.photo img, .photo2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .footer {
   display: flex;
   justify-content: space-between;
