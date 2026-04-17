@@ -196,12 +196,7 @@ display: flex;
 .full_img-wrapper {
   padding: 3.5rem 4%;
 }
-.hover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
+
 .full_img{
   display: flex;
   position: relative;
@@ -226,11 +221,31 @@ display: flex;
   font-size: 1.5rem;
   color: #232323;
 }
+.hover_title_left {
+  padding: 2rem 4%;
+  font-family: libre baskerville;
+  font-style: italic;
+  font-size: 4rem;
+  color: #BF2929;
+  text-align: left;
+}
+.hover_text_left {
+  padding: 2rem 4%;
+  font-family: libre baskerville;
+    text-align: left;
+
+  font-size: 1.5rem;
+  color: #232323;
+}
 .hover{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   position: absolute;
   bottom: 0;
-  right: 0;              /* 👈 anchor to right */
-  width: 20%;           /* 👈 less than 50% */
+  right: 0;              
+  width: 20%;           
   height: 100%;
 
   background-color: #ffffffb7;
