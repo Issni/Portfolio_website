@@ -702,3 +702,127 @@ when transition into p1 change to height to 100% then set transition to the heig
   }
 }
 
+@media (min-width: 3840px) {
+
+  html {
+    font-size: 120%; 
+  }
+
+  /* HEADER */
+  .header {
+    height: 180px;        
+    padding: 4rem 10%;
+  }
+
+  .logo {
+    font-size: 5rem;      
+  }
+
+  .navbar > li > a {
+    font-size: 2.8rem;   
+  }
+
+  .dropdown-menu li a {
+    font-size: 2.2rem;    
+  }
+
+  .dropdown-menu {
+    min-width: 340px;   
+  }
+
+  #menu-icon {
+    font-size: 5rem;      
+  }
+
+  /* HOME SECTION */
+  .home h1 {
+    font-size: 18rem;     
+  }
+
+  .home h2 {
+    font-size: 12rem;     
+  }
+
+  .home .hello::before {
+    top: 50px;
+    left: -30px;
+  }
+
+  .home-content {
+    padding-top: 30%;
+  }
+
+  .statement_text {
+    font-size: 2.4rem;    
+    padding: 6rem 10%;
+  }
+
+  /* BOOK SECTION */
+  .book-section > .container {
+    max-width: 1800px;
+    max-height: 1200px;
+    margin-top: 100rem;
+  }
+
+  .base_img {
+    width: 75vw;
+    max-width: 2800px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter {
+    max-width: 2400px;
+    padding: 120px 60px;
+  }
+
+  .newsletter h2 {
+    font-size: 7rem;    
+  }
+
+  .newsletter h3 {
+    font-size: 2.2rem;    
+  }
+
+  .signup_container {
+    padding: 30rem 10% 15rem 10%;
+  }
+
+  .signup_container form {
+    max-width: 1400px;
+  }
+
+  .input-icon input {
+    padding: 3.5rem;
+    font-size: 2.2rem;   
+  }
+
+  .signup_container button {
+    padding: 2.5rem 5rem;
+    font-size: 2rem;     
+  }
+
+  /* FOOTER */
+  .footer {
+    height: 300px;        
+    padding: 6rem 10%;
+  }
+
+  .footer .text {
+    font-size: 8rem;      
+  }
+
+  .contact a {
+    font-size: 2.8rem;    
+  }
+
+  .icon_links {
+    width: 260px;        
+    height: 50px;        
+  }
+
+  .icon_links img {
+    width: 50px;
+    height: auto;
+  }
+}
+
