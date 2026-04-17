@@ -708,7 +708,7 @@ when transition into p1 change to height to 100% then set transition to the heig
     font-size: 120%; 
   }
 
-  /* HEADER */
+  
   .header {
     height: 180px;        
     padding: 4rem 10%;
@@ -734,7 +734,7 @@ when transition into p1 change to height to 100% then set transition to the heig
     font-size: 5rem;      
   }
 
-  /* HOME SECTION */
+  
   .home h1 {
     font-size: 18rem;     
   }
@@ -757,7 +757,7 @@ when transition into p1 change to height to 100% then set transition to the heig
     padding: 6rem 10%;
   }
 
-  /* BOOK SECTION */
+  
   .book-section > .container {
     max-width: 1800px;
     max-height: 1200px;
@@ -769,7 +769,7 @@ when transition into p1 change to height to 100% then set transition to the heig
     max-width: 2800px;
   }
 
-  /* NEWSLETTER */
+ 
   .newsletter {
     max-width: 2400px;
     padding: 120px 60px;
@@ -801,7 +801,7 @@ when transition into p1 change to height to 100% then set transition to the heig
     font-size: 2rem;     
   }
 
-  /* FOOTER */
+  
   .footer {
     height: 300px;        
     padding: 6rem 10%;
