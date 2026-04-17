@@ -196,7 +196,9 @@ display: flex;
 .full_img-wrapper {
   padding: 3.5rem 4%;
 }
-
+.three_hover {
+padding: 15rem 0rem;
+}
 .full_img{
   display: flex;
   position: relative;
@@ -271,6 +273,40 @@ display: flex;
   
 
 }
+.hover_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;              
+  width: 20%;           
+  height: 100%;
+
+  background-color: #ffffffb7;
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-family: League Spartan;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+
+  padding: 2rem;
+
+  transform: translateX(-100%); /* start hidden on right */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  opacity: 0;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+    /*
+    UGLYYY
+    max-height: 20vh; 
+    overflow-y: auto;*/
+  
+
+}
 .hover_container{
     position: relative;
     display: inline-block;
@@ -286,6 +322,10 @@ display: flex;
 .hover_container:hover .hover{
     transform: translateX(0);
     opacity: 1;
+}
+.hover_container:hover .hover_left {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .footer {
