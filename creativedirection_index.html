@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
 
-<html>
-    <head>
+
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +90,7 @@
                            This is printed w/ 5gg yarn (stitches/inch) concept by Airi Pan, final illustration be Genie Ink
                                        </p>
                    </div>
-               </div>`
+               </div>
    
            </section>
            <section class="full_img-wrapper">
@@ -99,9 +102,9 @@
                             into the Frieren brand. The weave pattern above the logo is a deliberate nod to Fern’s sweater, something only fans would know and appreciate
                            that could stand alone as a piece of art by itself</p>
                        <p class="hover_text_left">
-                           Logo is designed by Vincent Wu                                    </p>
+                           Logo is designed by Vincent Wu</p>
                    </div>
-               </div>``
+               </div>
    
            </section>
            <section class="full_img-wrapper">
@@ -116,12 +119,62 @@
                             where the OTV team and I wanted to change this narrative. Undeniable quality.
                                        </p>
                    </div>
-               </div>`
+               </div>
    
            </section>
        </section>
         
-        
+            <!-- Slider main container -->
+    <div class="swiper">
+    <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="svgs/caro-1.svg" alt="1"></div>
+            <div class="swiper-slide"><img src="svgs/caro-2.svg" alt="2"></div>
+            <div class="swiper-slide"><img src="svgs/caro-3.svg" alt="3"></div>
+            <div class="swiper-slide"><img src="svgs/caro-4.svg" alt="4"></div>
+            <div class="swiper-slide"><img src="svgs/caro-5.svg" alt="5"></div>
+            <div class="swiper-slide"><img src="svgs/caro-1.svg" alt="1"></div>
+            <div class="swiper-slide"><img src="svgs/caro-2.svg" alt="2"></div>
+            <div class="swiper-slide"><img src="svgs/caro-3.svg" alt="3"></div>
+            <div class="swiper-slide"><img src="svgs/caro-4.svg" alt="4"></div>
+            <div class="swiper-slide"><img src="svgs/caro-5.svg" alt="5"></div>
+            <div class="swiper-slide"><img src="svgs/caro-1.svg" alt="1"></div>
+            <div class="swiper-slide"><img src="svgs/caro-2.svg" alt="2"></div>
+            <div class="swiper-slide"><img src="svgs/caro-3.svg" alt="3"></div>
+            <div class="swiper-slide"><img src="svgs/caro-4.svg" alt="4"></div>
+            <div class="swiper-slide"><img src="svgs/caro-5.svg" alt="5"></div>
+        </div>
+       
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+         <div class="swiper-pagination"></div>
+
+        <div class="r1">
+            <div class="photo"><img src="svgs/oftv1.svg" alt=""></div>
+            <div class="photo"><img src="svgs/oftv2.svg" alt=""></div>
+        </div>
+        <div class="r2">
+            <div class="photo2"><img src="svgs/oftv3.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv4.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv5.svg" alt=""></div>
+        </div>
+        <div class="r2">
+            <div class="photo2"><img src="svgs/oftv6.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv7.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv8.svg" alt=""></div>
+        </div>
+        <div class="r2">
+            <div class="photo2"><img src="svgs/oftv9.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv10.svg" alt=""></div>
+            <div class="photo2"><img src="svgs/oftv11.svg" alt=""></div>
+        </div>
+        <div class="r1">
+            <div class="photo"><img src="svgs/oftv12.svg" alt=""></div>
+            <div class="photo"><img src="svgs/oftv13.svg" alt=""></div>
+        </div>
+       
+    </div>
 
 
         <div class="footer">
@@ -157,6 +210,36 @@
         
 
         </div> 
-        <script src="home_script.js"></script>
+        <script src="creativedirection_script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            speed: 600,
+            watchSlidesProgress: true,
+            centeredSlidesBounds: false,
+            slideToClickedSlide: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                // dynamicBullets: true,
+                renderBullet: function(index, className) {
+                    if (index >= 5) return '';
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+        });
+
+swiper.slideToLoop(0, 0);
+    </script>
+
     </body>
 </html>
