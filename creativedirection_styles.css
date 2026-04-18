@@ -326,6 +326,17 @@ padding: 15rem 0rem;
   transform: translateX(0);
   opacity: 1;
 }
+@media (max-width: 1920px) {
+  .hover_title,
+  .hover_title_left {
+    font-size: 2.5rem;   /* was 4rem */
+  }
+
+  .hover_text,
+  .hover_text_left {
+    font-size: 1.2rem;   /* was 1.5rem */
+  }
+}
 .swiper {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
