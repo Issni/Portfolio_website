@@ -272,7 +272,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 20rem 10% 10rem 10%; */
+   /* padding: 20rem 10% 10rem 10%;  */
   margin: 0;
 }
 .newsletter {
@@ -280,7 +280,7 @@ h2{
   flex-direction: column;
   align-items: center;
   background-color: #242424;
-  padding: 5% 10%;
+  padding: 5% 15%;
   /* max-width: 1400px; */
   /* width: 100%; */
 }
@@ -294,14 +294,14 @@ h2{
 }
 .ppp{
  display: block;
- width: 60%;
+ width: 60%; 
  max-width: 500px;
  height: auto;
- padding-bottom: 4rem;       
+ padding-bottom: 2rem;         
 }
 .newsletter h2{
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   margin-bottom: 4rem;
   font-family: League Spartan;
@@ -321,7 +321,7 @@ h2{
   flex-direction: row;
   gap: 1rem;
   width: 100%;
-  max-width: 650px;
+  max-width: 800px;
 }
 
 .input-icon {
