@@ -259,7 +259,7 @@ padding: 15rem 0rem;
 
   padding: 2rem;
 
-  transform: translateX(100%); /* start hidden on right */
+  transform: translateX(100%);
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   opacity: 0;
@@ -293,7 +293,7 @@ padding: 15rem 0rem;
 
   padding: 2rem;
 
-  transform: translateX(-100%); /* start hidden on right */
+  transform: translateX(-100%); 
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   opacity: 0;
@@ -329,12 +329,18 @@ padding: 15rem 0rem;
 @media (max-width: 1920px) {
   .hover_title,
   .hover_title_left {
-    font-size: 2.5rem;   /* was 4rem */
+    font-size: 2.5rem;   
   }
 
   .hover_text,
   .hover_text_left {
-    font-size: 1.2rem;   /* was 1.5rem */
+    font-size: 1.2rem;   
+  }
+  .landing_text {
+    font-size: 1.6rem;
+  }
+  .title p {
+    font-size: 12rem;
   }
 }
 .swiper {
