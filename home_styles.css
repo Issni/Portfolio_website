@@ -272,17 +272,17 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem 10% 10rem 10%;
+  /* padding: 20rem 10% 10rem 10%; */
   margin: 0;
 }
 .newsletter {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: center;
-  background-color: #3b3737;
-  padding: 80px 40px;
-  max-width: 1400px;
-  width: 100%;
+  background-color: #242424;
+  padding: 5% 10%;
+  /* max-width: 1400px; */
+  /* width: 100%; */
 }
 
 .signup_container form {
@@ -290,17 +290,18 @@ h2{
   flex-direction: row;
   gap: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
 }
 .ppp{
  display: block;
- max-width: 100%;
+ width: 60%;
+ max-width: 500px;
  height: auto;
- padding-bottom: 4rem;
+ padding-bottom: 4rem;       
 }
 .newsletter h2{
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: 4rem;
   font-family: League Spartan;
@@ -310,9 +311,9 @@ h2{
   text-align: center;
   margin-bottom: 4rem;
   font-family: libre baskerville;
-  color: #aa0a0a;
+  color: #e8b8b8;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 200;
 }
 .signup_container form {
@@ -320,7 +321,7 @@ h2{
   flex-direction: row;
   gap: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 650px;
 }
 
 .input-icon {
@@ -338,6 +339,9 @@ h2{
 }
 
 .signup_container button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   padding: 1.5rem 3rem;
   font-size: 1.3rem;
   border: 1px solid #BF2929;
@@ -345,12 +349,29 @@ h2{
   color: #BF2929;
   cursor: pointer;
   font-family: Libre Baskerville;
+  transition: color 0.3s ease;
+}
+
+.signup_container button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #BF2929;
+  z-index: -1;
+  transition: width 0.2s ease;
+}
+
+.signup_container button:hover::before {
+  width: 100%;
 }
 
 .signup_container button:hover {
-  background-color: #f7f7f7;
+  color: white;
+  border-color: #BF2929;
 }
-
 .footer {
   display: flex;
   justify-content: space-between;
