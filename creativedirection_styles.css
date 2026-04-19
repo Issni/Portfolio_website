@@ -202,35 +202,33 @@ padding: 15rem 0rem;
   align-items: center;
 }
 .hover_title {
-  padding: 2rem 4%;
+  padding: 3rem 5%;
   font-family: libre baskerville;
   font-style: italic;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #BF2929;
   text-align: right;
 }
 .hover_text {
-  padding: 2rem 4%;
+  padding: 3rem 5%;
   font-family: libre baskerville;
-    text-align: right;
-
-  font-size: 1.5rem;
+  text-align: right;
+  font-size: 1.1rem;
   color: #232323;
 }
 .hover_title_left {
-  padding: 2rem 4%;
+  padding: 3rem 5%;
   font-family: libre baskerville;
   font-style: italic;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #BF2929;
   text-align: left;
 }
 .hover_text_left {
-  padding: 2rem 4%;
+  padding: 3rem 5%;
   font-family: libre baskerville;
-    text-align: left;
-
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1.1rem;
   color: #232323;
 }
 .hover{
@@ -308,23 +306,7 @@ padding: 15rem 0rem;
   transform: translateX(0);
   opacity: 1;
 }
-@media (max-width: 1920px) {
-  .hover_title,
-  .hover_title_left {
-    font-size: 2.5rem;   
-  }
 
-  .hover_text,
-  .hover_text_left {
-    font-size: 1.2rem;   
-  }
-  .landing_text {
-    font-size: 1.6rem;
-  }
-  .title p {
-    font-size: 12rem;
-  }
-}
 .swiper {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -489,4 +471,21 @@ color: white;
 margin-left: 4rem;
 font-weight: 500;
 font-family: League Spartan;
+}
+
+@media (min-width: 1280px) {
+  .hover_title,
+  .hover_title_left {
+    font-size: 3rem;
+  }
+  .hover_text,
+  .hover_text_left {
+    font-size: 1.5rem;
+  }
+  .landing_text {
+    font-size: 1.6rem;
+  }
+  .title p {
+    font-size: 17rem;
+  }
 }

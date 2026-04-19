@@ -144,23 +144,24 @@ display: flex;
 
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .navbar li:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
+
 .dropdown-menu li a{
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
 }
-.dropdown-menu li a:hover{
-  /* background: #c51919b2; */
-}
+
 .p1{
   position: relative;
   min-height: 100vh;
 }
+
 .home{
   background-image: url("svgs/about_me_cover.svg");
   background-size: 100% auto;   
@@ -170,6 +171,7 @@ display: flex;
   background-color: red;
   height: 60vh;
 }
+
 .artist_statement {
   background-color: #BF2929;
   padding: 4rem 10%;
@@ -179,6 +181,7 @@ display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .statement_text {
   position: relative;
   text-align: center;
@@ -193,12 +196,13 @@ display: flex;
   letter-spacing: 5%;
   z-index: 15;
 }
+
 .inline{
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 5%;
-
 }
+
 .artist{
   position: absolute;
   left: 50%;
@@ -207,17 +211,19 @@ display: flex;
   z-index: 10;
   pointer-events: none;
 }
+
 .artist img{
     width: 25vw;
     max-width: 400px;
-
 }
+
 .paragraph_about{
   margin-bottom: 7%;
   max-width: 1500px;
   margin: 0 auto;
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
 }
+
 .hello{
   padding: 4rem 20%;
   margin-top: 7%;
@@ -227,12 +233,14 @@ display: flex;
   font-size: 6rem;
   font-weight: 100;
 }
+
 .body_t{
   padding: 0rem 20%;
   color: black;
   font-size: 1.7rem;
   font-family: "Source Serif 4", serif;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -395,8 +403,8 @@ font-family: League Spartan;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFFFFF;
-  padding: 5% 15%;
+  background-color: #fffdfd;
+  padding: 5% 7%;
   /* max-width: 1400px;
   width: 100%; */
 }
@@ -408,17 +416,21 @@ font-family: League Spartan;
   width: 100%;
   max-width: 850px;
 }
+
 .ppp{
  display: block;
- max-width: 100%;
+ width: 40%;
+ max-width: 500px;
  height: auto;
  padding-bottom: 4rem;
 }
+
 .newsletter h2{
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  letter-spacing: -10;
   font-weight: 600;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-family: League Spartan;
   color: #1A1A1A;
 }
@@ -428,7 +440,7 @@ font-family: League Spartan;
   font-family: libre baskerville;
   color: #aa0a0a;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 200;
 }
 .signup_container form {
@@ -600,3 +612,9 @@ font-family: League Spartan;
   }
 }
 
+@media (min-width: 2560px) {
+  .signup_container {
+  min-height: 70vh;
+  padding: 4rem 10%;
+}
+}

@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
 
 });
+
 // i think either the front back are overlapping or theres something weird with the z index 
 // x2 time heig page - after fisrt page inscrase eigh of section - css animation move the content above below up and down
 // scrolling too fast causes the order to be messed up, add a slight delay to scroll event? 
