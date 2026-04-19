@@ -417,13 +417,11 @@ h2{
   width: 155px;
   height: 27px;
 }
-
 .contact {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-
 .contact a{  
 font-size: 1.8rem;
 color: white;
@@ -431,7 +429,9 @@ margin-left: 4rem;
 font-weight: 500;
 font-family: League Spartan;
 }
-
+.artstation {
+  z-index: 10;
+}
 .page-link {
     position: absolute;
     display: block;
