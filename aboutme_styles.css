@@ -498,9 +498,8 @@ font-family: League Spartan;
   width: 100%;
   padding: 20rem 10% 0rem 10%;
   gap: 10rem;
- 
-
 }
+
 .work_call{
   flex-wrap: nowrap;
   font-family: 'League Spartan';
@@ -509,6 +508,7 @@ font-family: League Spartan;
   letter-spacing: .1rem;
   color: #BF2929;
 }
+
 .work_link h3 {
   color: black;
   font-size: 1.7rem;
@@ -517,6 +517,7 @@ font-family: League Spartan;
   margin-bottom: 2rem;
   max-width: 500px;
 }
+
 .work_link_email {
   display: block;
   color: #BF2929;
@@ -534,27 +535,13 @@ font-family: League Spartan;
     height: 60vh;
   }
 }
-@media (max-width: 600px) {
-  .exhibition_title .exhibition-grid {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 500px) {
-  .exhibition {
-    grid-template-columns: 1fr;
-  }
-  .right {
-    text-align: left;
-    margin-top: 2px;
-  }
-}
+
 @media (min-width: 2000px) {
   .artist img {
     width: 20vw;
     max-width: 600px;
   }
 }
-
 @media (min-width: 2000px) {
   .paragraph_about {
     font-size: 2rem;

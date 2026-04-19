@@ -72,8 +72,8 @@ display: flex;
 }
 .navbar > li > a {
   display: flex;
-  align-items: center;     /* vertical centering */
-  justify-content: center; /* horizontal centering */
+  align-items: center;     
+  justify-content: center; 
   color: white;
   font-size: 1.8rem;
   margin-left: 0;
@@ -97,8 +97,8 @@ display: flex;
   content: "";
   position: absolute;
   top: 0;
-  right: 0;              /* start from right */
-  width: 0%;             /* hidden initially */
+  right: 0;              
+  width: 0%;             
   height: 100%;
   background: #a82a2ad3;
   z-index: -1;
@@ -106,7 +106,7 @@ display: flex;
   transition: width 0.3s ease;
 }
 .dropdown-menu li a:hover::before {
-  width: 100%;           /* expands left */
+  width: 100%;           
 
 }
 .navbar li{
@@ -117,7 +117,7 @@ display: flex;
 .dropdown-menu li {
   padding: 0.5rem 1rem;
 }
-/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
+
 .dropdown-menu { /*verticaly center nav and dropdown */
   
   position: absolute;
@@ -148,11 +148,6 @@ display: flex;
   text-align: right;
   font-size: 1.5rem;
 }
-
-
-
-
-
 .landing_text {
   max-width: 600px;
   text-align: center;
@@ -175,7 +170,7 @@ display: flex;
 .title p {
   font-family: "magicial game", sans-serif;
   font-size: 17rem;
-  white-space: nowrap; /* whats white-space again */
+  
 }
 .landing_text {
   position: absolute;
@@ -265,12 +260,6 @@ padding: 15rem 0rem;
   opacity: 0;
   z-index: 10;
   backdrop-filter: blur(2px);
-    /*
-    UGLYYY
-    max-height: 20vh; 
-    overflow-y: auto;*/
-  
-
 }
 .hover_left{
   display: flex;
@@ -299,12 +288,6 @@ padding: 15rem 0rem;
   opacity: 0;
   z-index: 10;
   backdrop-filter: blur(2px);
-    /*
-    UGLYYY
-    max-height: 20vh; 
-    overflow-y: auto;*/
-  
-
 }
 .hover_container{
     position: relative;
@@ -317,7 +300,6 @@ padding: 15rem 0rem;
     height: auto;
     display: block;
 }
-
 .hover_container:hover .hover{
     transform: translateX(0);
     opacity: 1;
@@ -348,7 +330,6 @@ padding: 15rem 0rem;
   margin-left: calc(-50vw + 50%);
   padding: 80px 0;
   overflow: visible;
-  
 }
 
 .swiper-slide {
@@ -501,6 +482,7 @@ padding: 15rem 0rem;
   align-items: center;
   gap: 4rem;
 }
+
 .contact a{  
 font-size: 1.8rem;
 color: white;

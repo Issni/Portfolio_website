@@ -99,7 +99,7 @@ display: flex;
   position: absolute;
   top: 0;
   right: 0;              /* start from right */
-  width: 0%;             /* hidden initially */
+  width: 0%;             /* hidden initially width 0 (dosent exist visualy) */
   height: 100%;
   background: #a82a2ad3;
   z-index: -1;
@@ -107,7 +107,7 @@ display: flex;
   transition: width 0.3s ease;
 }
 .dropdown-menu li a:hover::before {
-  width: 100%;           /* expands left */
+  width: 100%;           /* expands left (pushes out from width 0)*/
 
 }
 .navbar li{
@@ -118,7 +118,6 @@ display: flex;
 .dropdown-menu li {
   padding: 0.5rem 1rem;
 }
-/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
 .dropdown-menu { /*verticaly center nav and dropdown */
   
   position: absolute;
@@ -358,33 +357,33 @@ font-family: League Spartan;
 
   /* HEADER TEXT */
   .logo {
-    font-size: 3.6rem;   /* was 3rem */
+    font-size: 3.6rem;  
   }
 
   .navbar > li > a {
-    font-size: 2.2rem;   /* was 1.8rem */
+    font-size: 2.2rem;  
   }
 
   .dropdown-menu li a {
-    font-size: 1.9rem;   /* was 1.5rem */
+    font-size: 1.9rem;   
   }
 
   /* FOOTER TEXT */
   .footer .text {
-    font-size: 6rem;     /* was 5rem */
+    font-size: 6rem;     
   }
 
   .contact a {
-    font-size: 2.2rem;   /* was 1.8rem */
+    font-size: 2.2rem;   
   }
   .icon_links {
-    width: 182px;   /* was 155px */
-    height: 40px;   /* was 27px */
+    width: 182px;   
+    height: 40px;   
     gap: 2rem;
   }
 
   .icon_links img {
-    width: 35px;    /* scale icons */
+    width: 35px;    
     height: auto;
   }
 }

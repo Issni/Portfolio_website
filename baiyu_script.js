@@ -1,5 +1,4 @@
-// is there a way to still trigger the hover animation while scrolling? 
-// since right now it only triggers on hover and scrolling dosent count k nvm this is fixed
+
 const hoverBoxes = document.querySelectorAll('.hover');
 
 const observer = new IntersectionObserver(

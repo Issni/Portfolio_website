@@ -1,4 +1,3 @@
-/*header issue where the 10px is causing the whole thing to be lifted*/
 * {
   margin: 0;
   padding: 0;
@@ -91,8 +90,8 @@ display: flex;
   content: "";
   position: absolute;
   top: 0;
-  right: 0;              /* start from right */
-  width: 0%;             /* hidden initially */
+  right: 0;              
+  width: 0%;             
   height: 100%;
   background: #a82a2ad3;
   z-index: -1;
@@ -100,7 +99,7 @@ display: flex;
   transition: width 0.3s ease;
 }
 .dropdown-menu li a:hover::before {
-  width: 100%;           /* expands left */
+  width: 100%;           
 
 }
 .navbar li{
@@ -111,7 +110,7 @@ display: flex;
 .dropdown-menu li {
   padding: 0.5rem 1rem;
 }
-/* how to add a padding inbetween the dropdown and list without moving the lsit up*/
+
 .dropdown-menu { /*verticaly center nav and dropdown */
   
   position: absolute;
@@ -137,13 +136,11 @@ display: flex;
   transform: translateY(0);
   pointer-events: auto;
 }
+
 .dropdown-menu li a{
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
-}
-.dropdown-menu li a:hover{
-  /* background: #c51919b2; */
 }
 
 section {
@@ -182,12 +179,14 @@ section {
   object-position: 40% center;
   z-index: -1;
 }
+
 h1 {
   font-size: 11rem;
   font-family: League Spartan;
   font-weight: 200;
   letter-spacing: .3rem;
 }
+
 h2{
   font-size: 7rem;
   font-family: libre baskerville;
@@ -195,6 +194,7 @@ h2{
   margin-top: 4rem;
   letter-spacing: .3rem;
 }
+
 .hello {
     position: relative;
     display: inline-block;
@@ -206,16 +206,16 @@ h2{
     position: absolute;
     width: 130%;
     height: 70%;
-    top: 30px;     /* move down */
-    left: -20px;   /* move left */
+    top: 30px;   
+    left: -20px;   
     background-color: #BF2929; 
     z-index: -1;  
 }
+
 .artist_statement {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  
 }
 
 .intro {
@@ -224,6 +224,7 @@ h2{
   left: 15vw;   
   z-index: 0;
 }
+
 .statement_text {
   position: absolute;
   text-align: center;
@@ -236,8 +237,8 @@ h2{
   line-height: 1.6;
   z-index: 2;
   font-family: libre baskerville;
-
 }
+
 .demacia_cover {
   position: absolute;
   top: 0;
@@ -248,13 +249,14 @@ h2{
   border-radius: 10px;
   z-index: -1;  
 }
+
 .right a {
   position: absolute;
   color: white !important;
   font-family: libre baskerville;
   font-size: 2rem;
-  
 }
+
 .break {
     position: relative;   
     height: auto;
@@ -268,6 +270,7 @@ h2{
     width: 100vw;         
     height: auto;         
 }
+
 .signup_container{
   display: flex;
   justify-content: center;
@@ -275,6 +278,7 @@ h2{
    /* padding: 20rem 10% 10rem 10%;  */
   margin: 0;
 }
+
 .newsletter {
   display: flex;  
   flex-direction: column;
@@ -292,6 +296,7 @@ h2{
   width: 100%;
   max-width: 850px;
 }
+
 .ppp{
  display: block;
  width: 60%; 
@@ -299,6 +304,7 @@ h2{
  height: auto;
  padding-bottom: 2rem;         
 }
+
 .newsletter h2{
   text-align: center;
   font-size: 5rem;
@@ -307,6 +313,7 @@ h2{
   font-family: League Spartan;
   color: #f7f4f4;
 }
+
 .newsletter h3 {
   text-align: center;
   margin-bottom: 5rem;
@@ -316,6 +323,7 @@ h2{
   font-size: 1.6rem;
   font-weight: 200;
 }
+
 .signup_container form {
   display: flex;
   flex-direction: row;
@@ -372,6 +380,7 @@ h2{
   color: white;
   border-color: #BF2929;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -407,11 +416,13 @@ h2{
   width: 155px;
   height: 27px;
 }
+
 .contact {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
+
 .contact a{  
 font-size: 1.8rem;
 color: white;
@@ -419,7 +430,6 @@ margin-left: 4rem;
 font-weight: 500;
 font-family: League Spartan;
 }
-
 
 .page-link {
     position: absolute;
@@ -451,10 +461,6 @@ body {
     background-color: #202020;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 .book-section {
     display: flex;
     justify-content: center;
@@ -471,18 +477,18 @@ body {
 .notebook {
   position: relative;
 }
+
 .base_img {
   position: absolute;
   top: 51.2%;
   left: 47.2%;
   transform: translate(-50%, -50%);
-
   width: 79vw;        
   max-width: 1500px;
-
   z-index: 1;         
   pointer-events: none;
 }
+
 .book-section > .container {
     height: 50vw;
     width: 70vw;
@@ -497,7 +503,6 @@ body {
     perspective: 1200px;
 }
 
-
 .book-section .container .right {
     position: absolute;
     top: 0;
@@ -509,7 +514,6 @@ body {
     transition: transform 0.7s ease-in-out;
     /*isolation: isolate; /*forces page to be its own group* didnt really work*/
 }
-    
 
 .right > figure.front {
     background-color: #FFFFFF;
@@ -523,6 +527,7 @@ body {
     border-radius: 0px 0px 60px 60px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
+
 .right > figure.back {
     background-color: #FFFFFF;
     position: absolute;
@@ -543,6 +548,7 @@ body {
     transform: rotateX(-180deg); 
     box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
 }
+
 .container {
   position: relative;
 }
@@ -556,19 +562,8 @@ body {
   left: 0;
   z-index: 1;
   border-radius: 0px 0px 60px 60px;
-
-  /* -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 60%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-  ellipse at center,
-  black 65%,
-  rgba(0,0,0,0.3) 95%,
-  transparent 100%
-); */
 }
+
 .flip {
     transform: rotateX(180deg); 
 }
@@ -638,6 +633,7 @@ body {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
+
 /*flex position sketchbook in center - set heigh to be the height you want (ie 80 60 %) 
 when transition into p1 change to height to 100% then set transition to the height so secitono above will grow*/
 /* reminder move the artist statement up  once past the book scroll*/
@@ -673,30 +669,28 @@ when transition into p1 change to height to 100% then set transition to the heig
 }
 @media (min-width: 1800px) {
 
-  /* HEADER TEXT */
   .logo {
-    font-size: 3.6rem;   /*3rem */
+    font-size: 3.6rem;  
   }
 
   .navbar > li > a {
-    font-size: 2.2rem;   /*1.8rem */
+    font-size: 2.2rem;  
   }
 
   .dropdown-menu li a {
-    font-size: 1.9rem;   /*.5rem */
+    font-size: 1.9rem;  
   }
 
-  /* FOOTER TEXT */
   .footer .text {
-    font-size: 6rem;     /*5rem */
+    font-size: 6rem;     
   }
 
   .contact a {
-    font-size: 2.2rem;   /*1.8rem */
+    font-size: 2.2rem;  
   }
   .icon_links {
-    width: 182px;   /*155px */
-    height: 40px;   /*7px */
+    width: 182px;   
+    height: 40px;   
     gap: 2rem;
   }
 
@@ -704,13 +698,13 @@ when transition into p1 change to height to 100% then set transition to the heig
     width: 35px;    
     height: auto;
   }
-  /* HOME SECTION TEXT */
+  
   .home h1 {
-    font-size: 14rem;   /*11rem */
+    font-size: 14rem;   
   }
 
   .home h2 {
-    font-size: 9rem;    /*7rem */
+    font-size: 9rem;   
   }
 
   .home .hello::before {
@@ -779,7 +773,6 @@ when transition into p1 change to height to 100% then set transition to the heig
     padding: 6rem 10%;
   }
 
-  
   .book-section > .container {
     max-width: 1800px;
     max-height: 1200px;
@@ -791,7 +784,6 @@ when transition into p1 change to height to 100% then set transition to the heig
     max-width: 2800px;
   }
 
- 
   .newsletter {
     max-width: 2400px;
     padding: 120px 60px;
@@ -823,7 +815,6 @@ when transition into p1 change to height to 100% then set transition to the heig
     font-size: 2rem;     
   }
 
-  
   .footer {
     height: 300px;        
     padding: 6rem 10%;
