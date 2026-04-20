@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentPage = 0;
 
-   
+   // sets the default page z-index
     pages.forEach((page, i) => {
         page.style.zIndex = pages.length - i;
     });
 
     let isFlipping = false;
 
-    function flipNext() {
+    function flipNext() { //flipnext when called adds flip which triggers the css flip animation
         if (currentPage >= pages.length - 1 || isFlipping) return;
 
         isFlipping = true;
@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPage++;
 
         page.addEventListener('transitionend', function handler() {
-            page.style.zIndex = pages.length - currentPage;
+            page.style.zIndex = pages.length - currentPage; //
             isFlipping = false;
             page.removeEventListener('transitionend', handler);
         });
     }
 
-    function flipPrev() {
+    function flipPrev() { //fliprev when called removes flip which triggers the css flip animation exept backwards so it flips back
        
         if (currentPage <= 1 || isFlipping) return;
-
+        //page lock section - waits for animation to finish
         isFlipping = true;
 
         currentPage--;
@@ -46,24 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
         page.addEventListener('transitionend', function handler(e) {
             if (e.propertyName !== 'transform') return;
 
-            page.style.zIndex = pages.length - currentPage;
+            page.style.zIndex = pages.length - currentPage; //resets z-index to what it was -og order
             isFlipping = false;
 
             page.removeEventListener('transitionend', handler);
         });
     }
 
-  
+  // once the page loads - flips the page to 2
     pages[0].classList.add("flip");
     currentPage = 1;
-
+//
     book.addEventListener("wheel", (e) => {
         e.preventDefault();
 
-        if (e.deltaY > 0) {
+        if (e.deltaY > 0) { //y scroll down
             flipNext();
         } else {
-            flipPrev();
+            flipPrev(); //scroll up
         }
 
     }, { passive: false });
