@@ -7,12 +7,11 @@
 }
 
 body {
-  color: #FFFFFF;
-  /* background-color: #aa0a0a; */
+background-color: #FFFDFE;
 }
 
 section {
-  background-color: #ffffff;
+  background-color: #FFFDFE;
   position: relative;
 }
 
@@ -163,18 +162,18 @@ display: flex;
   transform: translate(-50%, -50%);
   text-align: center;
   white-space: nowrap;
+  color: #ffffff;
 }
 .title p {
   font-family: "magicial game", sans-serif;
   font-size: 13rem;
-  
 }
 .landing_text {
   position: absolute;
   bottom: 5rem;
   left: 10%;
   max-width: 600px;
-
+  color: #ffffff;
   text-align: left;
   font-family: libre baskerville;
   font-style: italic;
