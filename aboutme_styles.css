@@ -403,7 +403,7 @@ font-family: League Spartan;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffdfd;
+  /* background-color: #fffdfd; */
   padding: 5% 7%;
   /* max-width: 1400px;
   width: 100%; */
