@@ -73,19 +73,7 @@
     <section class="steam-hero">
         <div class="steam-hero-left">
             <div class="steam-logo-lockup">
-                <svg class="steam-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="20" cy="20" r="18" stroke="#1b9bd1" stroke-width="2"/>
-                    <circle cx="20" cy="20" r="8" fill="#1b9bd1" opacity="0.3"/>
-                    <line x1="20" y1="2"  x2="20" y2="8"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="20" y1="32" x2="20" y2="38" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="2"  y1="20" x2="8"  y2="20" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="32" y1="20" x2="38" y2="20" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="5.86"  y1="5.86"  x2="10.1"  y2="10.1"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="29.9"  y1="29.9"  x2="34.14" y2="34.14" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="34.14" y1="5.86"  x2="29.9"  y2="10.1"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="10.1"  y1="29.9"  x2="5.86"  y2="34.14" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span class="steam-logo-text">STEAM</span>
+                <img class="steam-logo-svg" src="svgs/steam logo.svg" alt="Steam">
             </div>
 
             <h1 class="steam-hero-title">
@@ -132,10 +120,10 @@
             <div class="steam-content-split">
                 <div class="steam-text-block">
                     <p class="steam-body">
-                        As someone who grew up on gaming, I found the Steam mobile experience consistently frustrating. The app lacks the visual polish and navigation clarity of the desktop client — browsing libraries, checking store pages, and managing downloads all feel like afterthoughts on mobile.
-                    </p>
+As someone who loves to play games, Steam has been a website I use often to browse through games. 
+Recently, I have been using the Steam app to look through games on the go, however, I have found that the user experience of the app could be improved.                    </p>
                     <p class="steam-body">
-                        This project is a full conceptual redesign of the Steam mobile app, focused on bringing the desktop experience to mobile with better hierarchy, faster navigation, and a visual language true to the Steam brand.
+                        <!-- This project is a full conceptual redesign of the Steam mobile app, focused on bringing the desktop experience to mobile with better hierarchy, faster navigation, and a visual language true to the Steam brand. -->
                     </p>
                 </div>
                 <div class="steam-img-slot" data-label="Original App — Library View">
@@ -164,11 +152,9 @@
                 </div>
                 <div class="steam-text-block">
                     <p class="steam-body">
-                        One of the main issues I noticed was the inconsistency of the interface, and how icons used across the Steam app felt foreign and out of place. The app's information density is high but the hierarchy is flat — everything competes for attention equally.
-                    </p>
+One of the main issues I had was the inconsistency of the colours, and icons used across the steam pages, and the app layout was hard to navigate.                    </p>
                     <p class="steam-body">
-                        Navigation between the Store, Library, Community, and Profile requires too many taps. Discovery is buried. Key actions like downloading, purchasing, and adding to wishlist are not surfaced consistently.
-                    </p>
+The header and footer took up too much real estate on the page and lead to a crammed viewing experience.                    </p>
                 </div>
             </div>
         </div>
@@ -182,18 +168,16 @@
                 <h2 class="steam-section-title">Possible Solution</h2>
                 <div class="steam-section-rule"></div>
             </div>
-            <div class="steam-text-block steam-text-block--wide">
-                <p class="steam-body">
-                    My goal is to create a cleaner, more organised interface of high quality. The redesign aims to establish a consistent visual language, a bottom navigation rail for one-thumb reachability, and a card-based layout that surfaces the most relevant content per section.
-                </p>
-                <p class="steam-body">
-                    Priority actions — download progress, store deals, friend activity — are all surfaced one tap from the home screen. Typography scales and spacing follow a strict grid to ensure readability across device sizes.
-                </p>
-            </div>
-            <div class="steam-img-slot steam-img-slot--wide" data-label="Solution Overview — Key Screens">
-                <img src="svgs/steam main 1.svg" alt="Redesign Solution Overview">
-                <img src="svgs/steam main 2.svg" alt="Redesign Solution Overview">
-
+            <div class="steam-content-split steam-solution-split">
+                <div class="steam-text-block">
+                    <p class="steam-body">
+My goal is to create a cleaner, more organized interface with easier methods of nagivation                    <p class="steam-body">
+                    </p>
+                </div>
+                <div class="steam-img-slot--solution">
+                    <img src="svgs/steam main 1.svg" alt="Redesign Solution Overview">
+                    <img src="svgs/steam main 2.svg" alt="Redesign Solution Overview">
+                </div>
             </div>
         </div>
     </section>
@@ -220,14 +204,23 @@
                 <div class="steam-process-col">
                     <h3 class="steam-sub-heading">Wireframe</h3>
                     <div class="steam-img-grid steam-img-grid--3">
-                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="First Iteration">
-                            <img src="svgs/steam first iteration.svg" alt="Wireframe 1">
+                        <div class="steam-wireframe-item">
+                            <div class="steam-img-slot steam-img-slot--phone-sm">
+                                <img src="svgs/steam first iteration.svg" alt="Wireframe 1">
+                            </div>
+                            <span class="steam-wireframe-label">First Iteration</span>
                         </div>
-                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Second Iteration">
-                            <img src="svgs/steam second iteration.svg" alt="Wireframe 2">
+                        <div class="steam-wireframe-item">
+                            <div class="steam-img-slot steam-img-slot--phone-sm">
+                                <img src="svgs/steam second iteration.svg" alt="Wireframe 2">
+                            </div>
+                            <span class="steam-wireframe-label">Second Iteration</span>
                         </div>
-                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Third Iteration">
-                            <img src="svgs/steam thirs iteration.svg" alt="Wireframe 3">
+                        <div class="steam-wireframe-item">
+                            <div class="steam-img-slot steam-img-slot--phone-sm">
+                                <img src="svgs/steam thirs iteration.svg" alt="Wireframe 3">
+                            </div>
+                            <span class="steam-wireframe-label">Final Iteration</span>
                         </div>
                     </div>
                 </div>
@@ -244,59 +237,17 @@
                 <div class="steam-section-rule"></div>
             </div>
 
-            <div class="steam-guide-grid">
-
-                <!-- Typography -->
-                <div class="steam-guide-block">
-                    <h3 class="steam-sub-heading">Typography</h3>
-                    <div class="steam-type-row">
-                        <div class="steam-type-card">
-                            <span class="steam-type-name">Malina Sans</span>
-                            <span class="steam-type-weight">Light</span>
-                            <span class="steam-type-sample">Aa</span>
-                        </div>
-                        <div class="steam-type-card">
-                            <span class="steam-type-name">Malina Sans</span>
-                            <span class="steam-type-weight">Regular</span>
-                            <span class="steam-type-sample steam-type-sample--bold">Aa</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Colors -->
-                <div class="steam-guide-block">
-                    <h3 class="steam-sub-heading">Colour Palette</h3>
-
-                    <div class="steam-color-group">
-                        <span class="steam-color-group-label">Text</span>
-                        <div class="steam-color-row">
-                            <div class="steam-swatch" style="background:#ffffff;" data-hex="#ffffff" data-name="Primary"></div>
-                            <div class="steam-swatch" style="background:#c6d4df;" data-hex="#c6d4df" data-name="Secondary"></div>
-                            <div class="steam-swatch" style="background:#7a9db8;" data-hex="#7a9db8" data-name="Muted"></div>
-                        </div>
-                    </div>
-
-                    <div class="steam-color-group">
-                        <span class="steam-color-group-label">Background</span>
-                        <div class="steam-color-row">
-                            <div class="steam-swatch" style="background:#0b1622;" data-hex="#0b1622" data-name="Base"></div>
-                            <div class="steam-swatch" style="background:#0f1f30;" data-hex="#0f1f30" data-name="Surface"></div>
-                            <div class="steam-swatch" style="background:#1b2838;" data-hex="#1b2838" data-name="Card"></div>
-                        </div>
-                    </div>
-
-                    <div class="steam-color-group">
-                        <span class="steam-color-group-label">Accent</span>
-                        <div class="steam-color-row">
-                            <div class="steam-swatch" style="background:#1b9bd1;" data-hex="#1b9bd1" data-name="Steam Blue"></div>
-                            <div class="steam-swatch" style="background:#66c0f4;" data-hex="#66c0f4" data-name="Highlight"></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <img src="svgs/steam style guide.svg" alt="Steam Style Guide" class="steam-style-guide-img">
         </div>
     </section>
+
+    <!-- Final UI showcase -->
+    <div class="steam-final-intro">
+        <span class="steam-final-label">Presentation Version</span>
+    </div>
+    <div class="steam-final-showcase">
+        <img src="svgs/steam ui ux final.svg" alt="Steam UI/UX Final Design">
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -304,19 +255,19 @@
             <a href="index.html" class="text">emily zhao</a>
             <div class="icon_links">
                 <div class="insta">
-                    <a href="https://www.instagram.com/pix_bun/"><img src="svgs/instagram.svg" alt="instagram"></a>
+                    <a href="https://www.instagram.com/cheese_nuz/"><img src="svgs/instagram.svg" alt="instagram"></a>
                 </div>
                 <div class="twitter">
-                    <a href="https://twitter.com/airipan"><img src="svgs/twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="svgs/twitter.svg" alt="twitter"></a>
                 </div>
                 <div class="artstation">
-                    <a href="https://artstation.com/airipan"><img src="svgs/artstation.svg" alt="artstation"></a>
+                    <a href="https://www.artstation.com/issni"><img src="svgs/artstation.svg" alt="artstation"></a>
                 </div>
             </div>
         </div>
         <nav class="contact">
-            <a href="#contact_info">email here</a>
-            <a href="#resume">resume</a>
+            <a href="mailto:emilyzhzz7673@gmail.com">emilyzhzz7673@gmail.com</a>
+            <a href="svgs/Resume.pdf" target="_blank">resume</a>
             <a href="#prints">prints</a>
         </nav>
     </footer>

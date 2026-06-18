@@ -73,14 +73,8 @@
     <section class="apex-hero">
         <div class="apex-hero-inner">
             <div class="apex-logo-lockup">
-                <svg class="apex-triangle-svg" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 2 L58 50 H2 Z" fill="#CF4420"/>
-                    <path d="M30 14 L48 46 H12 Z" fill="#0a0a0a"/>
-                </svg>
-                <div class="apex-brand-text">
-                    <span class="apex-brand-main">APEX LEGENDS</span>
-                    <span class="apex-brand-sub">UI / UX Redesign</span>
-                </div>
+                <img class="apex-triangle-svg" src="svgs/apex logo.svg" alt="Apex Legends">
+                <span class="apex-brand-sub">UI / UX Redesign</span>
             </div>
 
             <div class="apex-hero-meta">
@@ -92,6 +86,8 @@
                 <div class="apex-meta-item">
                     <span class="apex-meta-label">Tools</span>
                     <span class="apex-meta-value">Figma</span>
+                                        <span class="apex-meta-value">Photoshop</span>
+
                 </div>
                 <div class="apex-meta-divider"></div>
                 <div class="apex-meta-item">
@@ -115,20 +111,19 @@
                 <h2 class="apex-section-title">Overview</h2>
                 <div class="apex-section-rule"></div>
             </div>
-            <div class="apex-section-content apex-content-split">
-                <div class="apex-text-block">
+            <div class="apex-section-content">
+                <div class="apex-text-block apex-text-block--narrow">
                     <p class="apex-body">
-                        Apex Legends is a fast-paced battle royale with a distinct visual identity — yet its menu systems and HUD often feel cluttered and unintuitive. This project reimagines the core UI across three key areas: weapon customisation, progression, and in-game navigation.
+                        Apex Legends is a fast-paced battle royale with a distinct visual identity. This project reimagines the core UI across three key areas: weapon selection, weapon customisation, and progression.
                     </p>
                     <p class="apex-body">
-                        The redesign prioritises clarity and hierarchy without stripping the game's signature gritty military aesthetic. Every screen was rebuilt in Figma using the existing brand language as a foundation.
-                    </p>
+As someone who plays a lot of fps games, I wanted to change up Apex’s armory. I wanted to change some UI up to create a smoother navigation flow while keeping the identity of Apex intact.                    </p>
                 </div>
-                <div class="apex-img-grid apex-img-grid--2">
-                    <div class="apex-img-slot" data-label="Before — Original UI">
+                <div class="apex-img-grid apex-img-grid--2 apex-img-grid--overview">
+                    <div class="apex-img-slot">
                         <img src="svgs/apex before 1.svg" alt="Original APEX UI">
                     </div>
-                    <div class="apex-img-slot" data-label="After — Redesign">
+                    <div class="apex-img-slot">
                         <img src="svgs/apex before 2.svg" alt="Original APEX UI">
                     </div>
                 </div>
@@ -147,11 +142,9 @@
             <div class="apex-section-content">
                 <div class="apex-text-block apex-text-block--narrow">
                     <p class="apex-body">
-                        The weapon selection screen was redesigned to give each weapon more visual presence. A large side-panel preview replaces the original grid thumbnail, letting players inspect attachments and stats at a glance before entering a match.
-                    </p>
+I found the gun type selection of the armory difficult to navigate as the navigation grid took too many clicks and seperate pages to reach the desiered weapon. I wanted to simplify that into a side scrolling selection bar instead.                     </p>
                     <p class="apex-body">
-                        Weapon categories are collapsed into a horizontal filter rail to reduce vertical scrolling, while key stats — damage, fire rate, range — are surfaced directly without entering a sub-menu.
-                    </p>
+The original grid selection system has been changed to be a scrolling selection bar with each weapon for its specific type sorted under its name.                    </p>
                 </div>
                 <div class="apex-img-slot apex-img-slot--wide" data-label="Weapon Select — Full Screen Redesign">
                     <img src="svgs/apex 1.svg" alt="Weapon Select Redesign">
@@ -171,11 +164,9 @@
             <div class="apex-section-content apex-content-split apex-content-split--reverse">
                 <div class="apex-text-block">
                     <p class="apex-body">
-                        Cosmetic browsing is one of the most-used screens in the game, yet the original layout buries rare skins behind multiple filter layers. The redesign introduces a featured showcase with a full-bleed weapon render and a sidebar browser for swapping skins and charms in real time.
-                    </p>
+I found the charms tab being seperated from the skins tab which createdled to more navigation for the user. I combined these two pages into one with a side menu bar beside the skins tab.                    </p>
                     <p class="apex-body">
-                        Charm attachment points are visualised directly on the weapon preview, reducing the guesswork of where each charm sits in-game.
-                    </p>
+The two side boxes allows for one-click simple navigation when it comes to selection.                    </p>
                 </div>
                 <div class="apex-img-slot" data-label="Skins + Charms — Showcase View">
                     <img src="svgs/apex 2.svg" alt="Skins and Charms Redesign">
@@ -195,10 +186,8 @@
             <div class="apex-section-content">
                 <div class="apex-text-block apex-text-block--narrow">
                     <p class="apex-body">
-                        The Battle Pass and rank progression screens were consolidated into a single unified view. A persistent progress bar anchors the bottom of the screen, while the reward track unfolds horizontally with animated unlock states.
-                    </p>
+As someone who was new to Apex, the leveling system was familiar as it was similar to other games but, I found it challenging to find the trials tab in this page. I moved the trials to the left side to be more visible to the user and more clear with what rewards will be received.                     </p>
                     <p class="apex-body">
-                        Season milestones and daily challenges are surfaced on the same page, removing the need to navigate between three separate sub-menus just to check daily progress.
                     </p>
                 </div>
                 <div class="apex-img-slot apex-img-slot--wide" data-label="Progression — Battle Pass Overview">
@@ -217,7 +206,7 @@
                 <div class="apex-section-rule"></div>
             </div>
             <p class="apex-body apex-body--intro">
-                All UI components, icons, and illustrations were created from scratch in Figma. Below is a selection of the individual assets built for this project.
+                All UI components, icons, and illustrations were created from scratch in Figma and Photoshop. Below is a selection of the individual assets built for this project.
             </p>
             <div class="apex-assets-grid">
                 <div class="apex-img-slot apex-img-slot--asset" data-label="Icon Set">
@@ -237,25 +226,33 @@
         </div>
     </section>
 
+    <!-- Final presentation showcase -->
+    <div class="apex-final-intro">
+        <span class="apex-final-label">Presentation Version</span>
+    </div>
+    <div class="apex-final-showcase">
+        <img src="svgs/apex presentation ver.svg" alt="APEX Legends UI/UX Presentation">
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-left">
             <a href="index.html" class="text">emily zhao</a>
             <div class="icon_links">
                 <div class="insta">
-                    <a href="https://www.instagram.com/pix_bun/"><img src="svgs/instagram.svg" alt="instagram"></a>
+                    <a href="https://www.instagram.com/cheese_nuz/"><img src="svgs/instagram.svg" alt="instagram"></a>
                 </div>
                 <div class="twitter">
-                    <a href="https://twitter.com/airipan"><img src="svgs/twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="svgs/twitter.svg" alt="twitter"></a>
                 </div>
                 <div class="artstation">
-                    <a href="https://artstation.com/airipan"><img src="svgs/artstation.svg" alt="artstation"></a>
+                    <a href="https://www.artstation.com/issni"><img src="svgs/artstation.svg" alt="artstation"></a>
                 </div>
             </div>
         </div>
         <nav class="contact">
-            <a href="#contact_info">email here</a>
-            <a href="#resume">resume</a>
+            <a href="mailto:emilyzhzz7673@gmail.com">emilyzhzz7673@gmail.com</a>
+            <a href="svgs/Resume.pdf" target="_blank">resume</a>
             <a href="#prints">prints</a>
         </nav>
     </footer>

@@ -587,10 +587,8 @@ font-family: League Spartan;
   overflow: hidden;
   cursor: pointer;
   border-right: 1px solid rgba(255,255,255,0.06);
-  transition: flex 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .uiux-panel:last-child { border-right: none; }
-.uiux-panel:hover { flex: 1.9; }
 
 /* ─── Background images ─── */
 .uiux-panel-bg {
@@ -611,6 +609,11 @@ font-family: League Spartan;
 /* Placeholder colours until real images are swapped in */
 .uiux-img-base  { background: #1e1e1e; opacity: 1; transition: opacity 0.5s ease; }
 .uiux-img-hover { background: #2a2a2a; opacity: 0; transition: opacity 0.5s ease; }
+
+.uiux-panel:nth-child(2) .uiux-img-base,
+.uiux-panel:nth-child(2) .uiux-img-hover {
+  object-position: center top;
+}
 .uiux-panel:hover .uiux-img-hover { opacity: 1; }
 
 /* For real <img> tags: also apply object-fit + transitions */
@@ -753,6 +756,30 @@ font-family: League Spartan;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.sk-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+  max-width: 56rem;
+  margin-bottom: 2rem;
+}
+
+.sk-section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+}
+
+.sk-section-desc {
+  font-family: Caveat, cursive;
+  font-size: 2rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
 }
 
 /* ── 3D book scene ── */

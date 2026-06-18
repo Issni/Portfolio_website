@@ -203,9 +203,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: center center;
-    width: 70vw;    
+    width: 67vw;
     /* height: 40vw;     */
-    max-width: 1200px;
+    max-width: 1140px;
     z-index: 1;         
     pointer-events: none;
     padding-bottom: 15.5rem;
@@ -221,12 +221,13 @@ body {
         padding: 0;
         }
     .book-section > .container{
-        height: 510px;
-        width: 1020px;   
+        width: 63vw;
+        max-width: 1020px;
+        height: auto;
+        aspect-ratio: 2 / 1;
         position: relative;
         border-radius: 40px;
         perspective: 1200px;
-        /* No need for left/transform translateX anymore */
         }
     .container > .right{
         position: absolute;
