@@ -6,9 +6,23 @@
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after { cursor: none !important; }
+
+.cursor { pointer-events: none; }
+.cursor__ball {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 10000;
+}
+.cursor__ball--big    { mix-blend-mode: difference; }
+.cursor__ball--big    circle { fill: #BF2929; }
+.cursor__ball--small  { mix-blend-mode: difference; }
+.cursor__ball--small  circle { fill: #f7f8fa; }
+
 body {
   color: #FFFFFF;
   background-color: #e9f1ec;
+  cursor: none;
 }
 
 section {

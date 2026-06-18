@@ -85,11 +85,11 @@
         if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    goTo(current - 1, -1);
     });
 
-    // Big ball scales up on art items
+    // Big ball scales up on all clickable elements
     if (bigBall) {
-        images.forEach(img => {
-            img.closest('.art-item').addEventListener('mouseenter', () => gsap.to(bigBall, { duration: 0.3, scale: 2.5 }));
-            img.closest('.art-item').addEventListener('mouseleave', () => gsap.to(bigBall, { duration: 0.3, scale: 1   }));
+        document.querySelectorAll('a, button, [data-hover], .art-item').forEach(el => {
+            el.addEventListener('mouseenter', () => gsap.to(bigBall, { duration: 0.3, scale: 3 }));
+            el.addEventListener('mouseleave', () => gsap.to(bigBall, { duration: 0.3, scale: 1 }));
         });
     }
 })();
