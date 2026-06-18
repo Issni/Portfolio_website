@@ -482,13 +482,15 @@ font-family: League Spartan;
 }
 
 .apex-final-showcase {
-  padding: 0 10%;
+  padding: 0 10% 10rem;
 }
 
 .apex-final-showcase img {
   width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* ── Responsive ── */

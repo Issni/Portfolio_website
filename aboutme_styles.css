@@ -328,6 +328,21 @@ font-family: League Spartan;
     margin-top: 2px;
   }
 }
+@media (min-width: 1920px) and (min-height: 1200px) {
+  .artist {
+    top: calc(55% + 7rem);
+  }
+
+  .statement_text {
+    margin-top: 5rem;
+  }
+
+  .paragraph_about {
+    margin-top: 5rem;
+    padding-bottom: 17rem;
+  }
+}
+
 /* Limit artist image size on very large screens */
 @media (min-width: 2000px) {
   .artist img {

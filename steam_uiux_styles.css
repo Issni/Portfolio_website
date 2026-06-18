@@ -609,12 +609,15 @@ font-family: League Spartan;
 
 .steam-final-showcase {
   width: 100%;
+  padding-bottom: 10rem;
 }
 
 .steam-final-showcase img {
   width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .steam-style-guide-img {
