@@ -14,25 +14,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=League+Spartan&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet" />
 
         
-    <title>Airi Pan</title>
+    <title>Emily Zhao</title>
 
    
     <link rel="stylesheet" href="home_styles.css">
 
     
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     </head>
 
     <body>
 
+
+        <div class="cursor">
+            <div class="cursor__ball cursor__ball--big">
+                <svg height="30" width="30"><circle cx="15" cy="15" r="12" stroke-width="0"></circle></svg>
+            </div>
+            <div class="cursor__ball cursor__ball--small">
+                <svg height="10" width="10"><circle cx="5" cy="5" r="4" stroke-width="0"></circle></svg>
+            </div>
+        </div>
+
         <header class="header">
 
             <a href="index.html" class="logo">
-                airi pan
+                emily zhao
             </a>
 
             <i class="bx bx-menu" id="menu-icon"></i>
@@ -41,7 +52,7 @@
                 
                 <ul class="navbar">
                     
-                    <li>
+                    <!-- <li>
                     <a>Concept</a>
                     <ul class="dropdown-menu">
                         <li><a href="">For Demacia (2026)</a></li>
@@ -52,19 +63,21 @@
                         <li><a href="">Monkey King (2023)</a></li>
                         <li><a href="">Back4Blood (2021)</a></li>
                         <li><a href="">Alola Theme Park</a></li>
-                        
                     </ul>
-                    </li>
-
+                    </li> -->
                     <li><a href="illustration_index.html">Illustration</a></li>
                     <li>
-                    <a>Creative Direction</a>
+                    <a>UI/UX</a>
                     <ul class="dropdown-menu">
-                        <li><a href="creativedirection_index.html">OTV x Frieren</a></li>
-                        <li><a href="">Downtown Abby</a></li>
+                        <li><a href="apex_uiux.html">APEX UI Redesign</a>
+                        </li>
+                        <li><a href="steam_uiux.html">Steam Mobile Redesign</a></li>
                     </ul>
                     </li>
-                    <li><a href="aboutme_index.html">About</a></li>
+                    <li><a href="sketchbook_index.html">Sketchbook</a>
+                    </li>
+                    <li><a href="aboutme_index.html">About</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -78,16 +91,163 @@
             <div class="artist_statement">
                 <div class="intro">
                     <h1><span class="hello">Hello!</span></h1> 
-                    <h2><span>I'm Airi Pan</span></h2>
+                    <h2><span>I'm Emily Zhao</span></h2>
                 </div>
                 <p class="statement_text">
-                    Concept designer and illustrator for film, games, and animation by day. 
-                                <br>Trying to make designs into reality by night
+                    blablabla balabal something soemthing
+                                <br>something something
                 </p>
             </div>
         </section>
+        
+        <!-- ── Illustration Section ── -->
+        <section class="section-illustration">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Illustration</h2>
+                </div>
+                <a href="illustration_index.html" class="view-all-link">View All →</a>
+            </div>
+            <div class="illust-grid">
+                <!-- hero: spans 2 columns -->
+                <a href="illustration_index.html" class="illust-card illust-hero">
+                    <img src="illust-svg/beyo-1.png" alt="Featured Artwork">
+                    <div class="illust-overlay"></div>
+                </a>
+                <!-- standard cards: all identical 1 col × 1 row -->
+                <a href="illustration_index.html" class="illust-card">
+                    <img src="illust-svg/char-1.png" alt="Character Art">
+                    <div class="illust-overlay"></div>
+                </a>
+                <a href="illustration_index.html" class="illust-card">
+                    <img src="illust-svg/canghe-1.png" alt="Artwork">
+                    <div class="illust-overlay"></div>
+                </a>
+                <a href="illustration_index.html" class="illust-card">
+                    <img src="illust-svg/lifeweaver-1.png" alt="Artwork">
+                    <div class="illust-overlay"></div>
+                </a>
+                <a href="illustration_index.html" class="illust-card">
+                    <img src="illust-svg/fms-1.png" alt="Artwork">
+                    <div class="illust-overlay"></div>
+                </a>
+            </div>
+        </section>
 
-        <section class="notebook">
+        <!-- ── UI / UX Section ── -->
+        <section class="section-uiux">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">Design</span>
+                    <h2 class="section-title">UI / UX</h2>
+                </div>
+            </div>
+
+            <div class="uiux-panels">
+
+                <!-- Panel 1 -->
+                <div class="uiux-panel">
+                    <div class="uiux-panel-bg">
+                        <!-- base image: replace div with <img class="uiux-img-base" src="..." alt=""> -->
+                        <img class="uiux-img-base" src="svgs/apex 1.svg" alt="">
+                        <!-- hover image: replace div with <img class="uiux-img-hover" src="..." alt=""> -->
+                        <img class="uiux-img-base" src="svgs/apex 1.svg" alt="">
+                    </div>
+                    <div class="uiux-panel-label">
+                        <span class="uiux-panel-num">01</span>
+                        <span class="uiux-panel-short">APEX UI Redesign</span>
+                    </div>
+                    <div class="uiux-panel-info">
+                        <span class="uiux-info-num">01</span>
+                        <h3 class="uiux-info-title">APEX UI Redesign</h3>
+                        <p class="uiux-info-desc">A full redesign concept for Apex Legends' in-game interface and HUD system.</p>
+                        <a href="apex_uiux.html" class="uiux-info-cta">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="uiux-panel">
+                    <div class="uiux-panel-bg">
+                        <img class="uiux-img-base" src="svgs/uiux.svg" alt="">
+                        <img class="uiux-img-base" src="svgs/uiux.svg" alt="">
+                    </div>
+                    <div class="uiux-panel-label">
+                        <span class="uiux-panel-num">02</span>
+                        <span class="uiux-panel-short">Steam Mobile Redesign</span>
+                    </div>
+                    <div class="uiux-panel-info">
+                        <span class="uiux-info-num">02</span>
+                        <h3 class="uiux-info-title">Steam Mobile Redesign</h3>
+                        <p class="uiux-info-desc">Reimagining the Steam mobile browsing and library experience.</p>
+                        <a href="steam_uiux.html" class="uiux-info-cta">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="uiux-panel uiux-panel--upcoming">
+                    <div class="uiux-panel-bg">
+                        <div class="uiux-img-base"></div>
+                        <div class="uiux-img-hover"></div>
+                    </div>
+                    <div class="uiux-panel-label">
+                        <span class="uiux-panel-num">03</span>
+                        <span class="uiux-panel-short">Coming Soon</span>
+                    </div>
+                    <div class="uiux-panel-info">
+                        <span class="uiux-info-num">03</span>
+                        <h3 class="uiux-info-title">New Project</h3>
+                        <p class="uiux-info-desc">Something new is in the works.</p>
+                        <span class="uiux-info-cta uiux-info-cta--wip">Coming Soon</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Sketchbook Section ── -->
+        <section class="section-sketchbook">
+            <div class="sketchbook-section-wrap">
+                <div class="sk-scene" id="sk-scene">
+                    <div class="sk-float-wrap" id="sk-float-wrap">
+                        <div class="sk-wrap" id="sk-wrap">
+
+                            <!-- Book body: cream pages shown when cover opens -->
+                            <div class="sk-body">
+                                <div class="sk-inner-pages"></div>
+                            </div>
+
+                            <!-- Front cover: the red face that opens -->
+                            <div class="sk-cover" id="sk-cover">
+                                <div class="sk-face sk-face-front">
+                                    <div class="sk-cover-border"></div>
+                                    <span class="sk-cover-title">Sketchbook</span>
+                                    <span class="sk-cover-author">Emily Zhao</span>
+                                </div>
+                                <div class="sk-face sk-face-inside">
+                                    <div class="sk-ruled-lines"></div>
+                                </div>
+                            </div>
+
+                            <!-- Spine: stays on top at all times -->
+                            <div class="sk-spine"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="sk-click-hint" id="sk-hint">
+                        <span class="sk-click-text">click me</span>
+                        <svg class="sk-arrow-svg" viewBox="0 0 50 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 35 8 C 40 35 18 52 12 72" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 12 72 L 24 66 M 12 72 L 16 58" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="notebook">
             <div class="book-wrapper">
 
                 <img src="svgs/Frame 71.svg" class="base_img"/> 
@@ -152,32 +312,13 @@
         <section class="break">
             <img src="svgs/breaker_image.svg" alt="div_img" class="breaker_img"/>
         </section>
-        <!-- remove white for def. backrhrond -->
-        <section class="signup_container"> 
-                <div class="newsletter">
-                    <img src="svgs/ppp.svg" class="ppp"></img>
-                    <h2>Become a Pan Pen Pal!</h2>
-                    <h3>Sign up for my e-letter series for sneak peeks & first dibs at new artwork, courses, events, and more.</h3>
-                    <form action="">
-                        <div class="input-icon">
-                            <i class="name"></i>
-                            <input type="text" name="" id="username" placeholder="Name" required>
-
-                        </div>
-                        <div class="input-icon">
-                            <i class="email"></i>
-                            <input type="text" name="" id="password" placeholder="Email Adress" required>
-                        </div>
-                        <button type="submit">Sign up</button>
-                    </form>
-                </div>
-        </section>
-        
+         remove white for def. backrhrond -->
+       
         <div class="footer">
                 <div class="footer-left">
                     
                     <a href="index.html" class="text">
-                        airi pan
+                        emily zhao
                     </a>
                     <div class="icon_links">
                         <div class="insta">
@@ -199,7 +340,7 @@
                 </div>   
                     
             <nav class="contact">
-                <a href="#contact_info">hello@airipan.com</a>
+                <a href="#contact_info">email here</a>
                 <a href="#resume">resume</a>
                 <a href="#prints">prints</a>
             </nav>

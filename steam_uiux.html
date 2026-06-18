@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Mobile Redesign — Emily Zhao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=League+Spartan:wght@300;400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="steam_uiux_styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+
+    <!-- Custom cursor -->
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big">
+            <svg height="30" width="30"><circle cx="15" cy="15" r="12" stroke-width="0"></circle></svg>
+        </div>
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10"><circle cx="5" cy="5" r="4" stroke-width="0"></circle></svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+   <header class="header">
+
+            <a href="index.html" class="logo">
+                emily zhao
+            </a>
+
+            <i class="bx bx-menu" id="menu-icon"></i>
+
+            <nav>
+                
+                <ul class="navbar">
+                    
+                    <!-- <li>
+                    <a>Concept</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">For Demacia (2026)</a></li>
+                        <li><a href="baiyu_index.html">BaiYuPan</a></li>
+                        <li><a href="">Hoppers (2026)</a></li>
+                        <li><a href="">Manor Grey</a></li>
+                        <li><a href="">Ambrosia</a></li>
+                        <li><a href="">Monkey King (2023)</a></li>
+                        <li><a href="">Back4Blood (2021)</a></li>
+                        <li><a href="">Alola Theme Park</a></li>
+                    </ul>
+                    </li> -->
+                    <li><a href="illustration_index.html">Illustration</a></li>
+                    <li>
+                    <a>UI/UX</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="apex_uiux.html">APEX UI Redesign</a>
+                        </li>
+                        <li><a href="steam_uiux.html">Steam Mobile Redesign</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="sketchbook_index.html">Sketchbook</a>
+                    </li>
+                    <li><a href="aboutme_index.html">About</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+
+    <!-- ── Hero ── -->
+    <section class="steam-hero">
+        <div class="steam-hero-left">
+            <div class="steam-logo-lockup">
+                <svg class="steam-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="#1b9bd1" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="8" fill="#1b9bd1" opacity="0.3"/>
+                    <line x1="20" y1="2"  x2="20" y2="8"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="32" x2="20" y2="38" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2"  y1="20" x2="8"  y2="20" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="32" y1="20" x2="38" y2="20" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="5.86"  y1="5.86"  x2="10.1"  y2="10.1"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="29.9"  y1="29.9"  x2="34.14" y2="34.14" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="34.14" y1="5.86"  x2="29.9"  y2="10.1"  stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="10.1"  y1="29.9"  x2="5.86"  y2="34.14" stroke="#1b9bd1" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="steam-logo-text">STEAM</span>
+            </div>
+
+            <h1 class="steam-hero-title">
+                STEAM —<br>
+                MOBILE APP<br>
+                REDESIGN
+            </h1>
+
+            <p class="steam-hero-sub">A Conceptual Redesign of the Steam Mobile Application</p>
+
+            <div class="steam-hero-meta">
+                <div class="steam-meta-item">
+                    <span class="steam-meta-label">Role</span>
+                    <span class="steam-meta-value">UI / UX Designer</span>
+                </div>
+                <div class="steam-meta-divider"></div>
+                <div class="steam-meta-item">
+                    <span class="steam-meta-label">Tools</span>
+                    <span class="steam-meta-value">Figma</span>
+                </div>
+                <div class="steam-meta-divider"></div>
+                <div class="steam-meta-item">
+                    <span class="steam-meta-label">Type</span>
+                    <span class="steam-meta-value">Conceptual Redesign</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="steam-hero-right">
+            <div class="steam-img-slot steam-img-slot--phone" data-label="App Mockup">
+                <img src="svgs/steam phone render.svg" alt="Steam App Redesign">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 01 About Project ── -->
+    <section class="steam-section" id="about">
+        <div class="steam-section-inner">
+            <div class="steam-section-header">
+                <span class="steam-num">01</span>
+                <h2 class="steam-section-title">About Project</h2>
+                <div class="steam-section-rule"></div>
+            </div>
+            <div class="steam-content-split">
+                <div class="steam-text-block">
+                    <p class="steam-body">
+                        As someone who grew up on gaming, I found the Steam mobile experience consistently frustrating. The app lacks the visual polish and navigation clarity of the desktop client — browsing libraries, checking store pages, and managing downloads all feel like afterthoughts on mobile.
+                    </p>
+                    <p class="steam-body">
+                        This project is a full conceptual redesign of the Steam mobile app, focused on bringing the desktop experience to mobile with better hierarchy, faster navigation, and a visual language true to the Steam brand.
+                    </p>
+                </div>
+                <div class="steam-img-slot" data-label="Original App — Library View">
+                    <img src="svgs/steam main cover.svg" alt="Original Steam App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02 Problem Statement ── -->
+    <section class="steam-section" id="problem">
+        <div class="steam-section-inner">
+            <div class="steam-section-header">
+                <span class="steam-num">02</span>
+                <h2 class="steam-section-title">Problem Statement</h2>
+                <div class="steam-section-rule"></div>
+            </div>
+            <div class="steam-content-split steam-content-split--reverse">
+                <div class="steam-img-grid steam-img-grid--2">
+                    <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Original — Store">
+                        <img src="svgs/steam original store 1.svg" alt="">
+                    </div>
+                    <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Original — Library">
+                        <img src="svgs/steam original store 2.svg" alt="">
+                    </div>
+                </div>
+                <div class="steam-text-block">
+                    <p class="steam-body">
+                        One of the main issues I noticed was the inconsistency of the interface, and how icons used across the Steam app felt foreign and out of place. The app's information density is high but the hierarchy is flat — everything competes for attention equally.
+                    </p>
+                    <p class="steam-body">
+                        Navigation between the Store, Library, Community, and Profile requires too many taps. Discovery is buried. Key actions like downloading, purchasing, and adding to wishlist are not surfaced consistently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03 Possible Solution ── -->
+    <section class="steam-section" id="solution">
+        <div class="steam-section-inner">
+            <div class="steam-section-header">
+                <span class="steam-num">03</span>
+                <h2 class="steam-section-title">Possible Solution</h2>
+                <div class="steam-section-rule"></div>
+            </div>
+            <div class="steam-text-block steam-text-block--wide">
+                <p class="steam-body">
+                    My goal is to create a cleaner, more organised interface of high quality. The redesign aims to establish a consistent visual language, a bottom navigation rail for one-thumb reachability, and a card-based layout that surfaces the most relevant content per section.
+                </p>
+                <p class="steam-body">
+                    Priority actions — download progress, store deals, friend activity — are all surfaced one tap from the home screen. Typography scales and spacing follow a strict grid to ensure readability across device sizes.
+                </p>
+            </div>
+            <div class="steam-img-slot steam-img-slot--wide" data-label="Solution Overview — Key Screens">
+                <img src="svgs/steam main 1.svg" alt="Redesign Solution Overview">
+                <img src="svgs/steam main 2.svg" alt="Redesign Solution Overview">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 04 Sketching & Planning ── -->
+    <section class="steam-section" id="process">
+        <div class="steam-section-inner">
+            <div class="steam-section-header">
+                <span class="steam-num">04</span>
+                <h2 class="steam-section-title">Sketching &amp; Planning</h2>
+                <div class="steam-section-rule"></div>
+            </div>
+
+            <div class="steam-process-row">
+                <div class="steam-process-col">
+                    <h3 class="steam-sub-heading">Sketch</h3>
+                    <div class="steam-img-slot steam-img-slot--sketch" data-label="Initial Sketches">
+                        <img src="svgs/steam sketching and planning.svg" alt="Initial Sketches">
+                    </div>
+                </div>
+            </div>
+
+            <div class="steam-process-row">
+                <div class="steam-process-col">
+                    <h3 class="steam-sub-heading">Wireframe</h3>
+                    <div class="steam-img-grid steam-img-grid--3">
+                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="First Iteration">
+                            <img src="svgs/steam first iteration.svg" alt="Wireframe 1">
+                        </div>
+                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Second Iteration">
+                            <img src="svgs/steam second iteration.svg" alt="Wireframe 2">
+                        </div>
+                        <div class="steam-img-slot steam-img-slot--phone-sm" data-label="Third Iteration">
+                            <img src="svgs/steam thirs iteration.svg" alt="Wireframe 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 05 Style Guide ── -->
+    <section class="steam-section steam-section--guide" id="style-guide">
+        <div class="steam-section-inner">
+            <div class="steam-section-header">
+                <span class="steam-num">05</span>
+                <h2 class="steam-section-title">Style Guide</h2>
+                <div class="steam-section-rule"></div>
+            </div>
+
+            <div class="steam-guide-grid">
+
+                <!-- Typography -->
+                <div class="steam-guide-block">
+                    <h3 class="steam-sub-heading">Typography</h3>
+                    <div class="steam-type-row">
+                        <div class="steam-type-card">
+                            <span class="steam-type-name">Malina Sans</span>
+                            <span class="steam-type-weight">Light</span>
+                            <span class="steam-type-sample">Aa</span>
+                        </div>
+                        <div class="steam-type-card">
+                            <span class="steam-type-name">Malina Sans</span>
+                            <span class="steam-type-weight">Regular</span>
+                            <span class="steam-type-sample steam-type-sample--bold">Aa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div class="steam-guide-block">
+                    <h3 class="steam-sub-heading">Colour Palette</h3>
+
+                    <div class="steam-color-group">
+                        <span class="steam-color-group-label">Text</span>
+                        <div class="steam-color-row">
+                            <div class="steam-swatch" style="background:#ffffff;" data-hex="#ffffff" data-name="Primary"></div>
+                            <div class="steam-swatch" style="background:#c6d4df;" data-hex="#c6d4df" data-name="Secondary"></div>
+                            <div class="steam-swatch" style="background:#7a9db8;" data-hex="#7a9db8" data-name="Muted"></div>
+                        </div>
+                    </div>
+
+                    <div class="steam-color-group">
+                        <span class="steam-color-group-label">Background</span>
+                        <div class="steam-color-row">
+                            <div class="steam-swatch" style="background:#0b1622;" data-hex="#0b1622" data-name="Base"></div>
+                            <div class="steam-swatch" style="background:#0f1f30;" data-hex="#0f1f30" data-name="Surface"></div>
+                            <div class="steam-swatch" style="background:#1b2838;" data-hex="#1b2838" data-name="Card"></div>
+                        </div>
+                    </div>
+
+                    <div class="steam-color-group">
+                        <span class="steam-color-group-label">Accent</span>
+                        <div class="steam-color-row">
+                            <div class="steam-swatch" style="background:#1b9bd1;" data-hex="#1b9bd1" data-name="Steam Blue"></div>
+                            <div class="steam-swatch" style="background:#66c0f4;" data-hex="#66c0f4" data-name="Highlight"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="index.html" class="text">emily zhao</a>
+            <div class="icon_links">
+                <div class="insta">
+                    <a href="https://www.instagram.com/pix_bun/"><img src="svgs/instagram.svg" alt="instagram"></a>
+                </div>
+                <div class="twitter">
+                    <a href="https://twitter.com/airipan"><img src="svgs/twitter.svg" alt="twitter"></a>
+                </div>
+                <div class="artstation">
+                    <a href="https://artstation.com/airipan"><img src="svgs/artstation.svg" alt="artstation"></a>
+                </div>
+            </div>
+        </div>
+        <nav class="contact">
+            <a href="#contact_info">email here</a>
+            <a href="#resume">resume</a>
+            <a href="#prints">prints</a>
+        </nav>
+    </footer>
+
+    <script src="steam_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #FFFFFF;
+  background-color: #aa0a0a;
+}
+
+section {
+  background-color: #1A1A1A;
+  position: relative;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 3.5rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+  background-color: #1a1a1aab;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: libre baskerville;
+  /* font-family: caveat; */
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6rem;
+  justify-content: center;
+}
+nav {
+height: 100%;
+display: flex;
+}
+.navbar > li > a {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  text-align: center;
+}
+.dropdown-menu li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              
+  width: 0%;             
+  height: 100%;
+  background: #a82a2ad3;
+  z-index: -1;
+
+  transition: width 0.3s ease;
+}
+.dropdown-menu li a:hover::before {
+  width: 100%;           
+
+}
+.navbar li{
+  position: relative;
+  height: 100%;
+
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu { /*verticaly center nav and dropdown */
+  
+  position: absolute;
+  top: 100%;          /* directly under the li */
+  right: -1rem;
+  background: #2b2b2bd3;
+  list-style: none;
+  padding: 0;
+  min-width: 220px;
+
+  opacity: 0;
+  left: auto;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  pointer-events: none;
+  
+
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.navbar li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu li a{
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 4rem 10%;
+}
+
+
+.page-link {
+    position: absolute;
+    display: block;
+    z-index: 1000; /* above page image */
+    cursor: pointer;
+    /* background: rgba(255, 0, 0, 0.3);
+    outline: 2px solid red;  */
+}
+
+/* Example hotspot size — adjust per page */
+.page-link.small {
+    width: 20%;
+    height: 15%;
+}
+
+.page-link.medium {
+    width: 40%;
+    height: 25%;
+}
+
+.page-link.large {
+    width: 60%;
+    height: 40%;
+} 
+
+body {
+    margin: 0;
+    background-color: #202020;
+}
+
+.book-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: visible; 
+    z-index: 2;
+    display: block; 
+    transition: height 0.7s ease-in-out;
+}
+
+.notebook {
+    position: relative;
+}
+
+.base_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    width: 70vw;    
+    /* height: 40vw;     */
+    max-width: 1200px;
+    z-index: 1;         
+    pointer-events: none;
+    padding-bottom: 15.5rem;
+}
+
+.book-section{
+        height: 100vh;
+        width: 100%;
+        display: flex;               /* flex centering */
+        justify-content: center;     /* horizontal center */
+        align-items: center;         /* vertical center */
+        text-align: center;
+        padding: 0;
+        }
+    .book-section > .container{
+        height: 510px;
+        width: 1020px;   
+        position: relative;
+        border-radius: 40px;
+        perspective: 1200px;
+        /* No need for left/transform translateX anymore */
+        }
+    .container > .right{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        transition: 0.7s ease-in-out;
+        transform-style: preserve-3d;
+        }
+      
+    .book-section > .container > .right{
+        right:0;
+        transform-origin: left;
+        border-radius: 40px 0 0 40px;
+        }
+    .right > figure.front, .right > figure.back{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        backface-visibility: hidden;
+        background-color: white;
+        overflow: hidden;
+        }
+    .right > figure.front{
+        background-position: left;
+        border-radius: 0 40px 40px 0;
+        box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.2);
+        }
+    .right > figure.back{
+        background-position: right;
+        border-radius: 40px 0 0 40px;
+        box-shadow: -2px 2px 15px -2px rgba(0,0,0,0.2);
+        transform: rotateY(180deg);
+        }
+    .flip{
+        transform: rotateY(-180deg);
+        }
+    .flip::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 40px 40px 0;
+        background-color: rgba(0,0,0,0.1);
+        }
+    .book-section > button{
+        border: 2px solid #ef9f00;
+        background-color: transparent;
+        color: #ef9f00;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s ease-in-out;
+        }
+    .book-section > button:focus, .book-section > button:active{
+            outline: none;
+        }
+    .book-section > p{
+        color: rgba(0,0,0,0.7);
+        font-family: calibri;
+        font-size: 24px;
+        }
+    .book-section > p > a{
+        text-decoration: none;
+        color: #ef9f00;
+        }
+    .book-section > button:hover{
+        background-color: #ef9f00;
+        color: #fff;
+        }
+    .front#cover, .back#back-cover{
+        background-color: #ffcb63;
+        font-family: calibri;
+        text-align: left;
+        padding: 0 30px;
+        }
+    .front#cover h1{
+        color: #fff;
+        }
+    .front#cover p{
+        color: rgba(0,0,0,0.8);
+        font-size: 14px;
+        }
+
+.right > figure.front h1,
+.right > figure.front p {
+    color: black; 
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.right > figure.front h1 {
+    font-size: 2rem;
+}
+
+.right > figure.front p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 5rem 10%;
+  margin-top: auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* margin-top: 2rem; */
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 3.8rem;
+  opacity: 1;
+  z-index: 10;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}
+.artstation {
+  z-index: 10;
+}
+.page-link {
+    position: absolute;
+    display: block;
+    z-index: 1000; /* above page image */
+    cursor: pointer;
+    /* background: rgba(255, 0, 0, 0.3);
+    outline: 2px solid red;  */
+}

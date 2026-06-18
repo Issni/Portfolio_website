@@ -1,0 +1,640 @@
+/* ── Steam Mobile Redesign Case Study ── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after { cursor: none !important; }
+
+html { font-size: 62.5%; overflow-x: hidden; }
+
+body {
+  background-color: #0b1622;
+  color: #ffffff;
+  cursor: none;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* ── Custom cursor ── */
+.cursor { pointer-events: none; }
+
+.cursor__ball {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 10000;
+}
+
+.cursor__ball--big    { mix-blend-mode: difference; }
+.cursor__ball--big    circle { fill: #BF2929; }
+.cursor__ball--small  { mix-blend-mode: difference; }
+.cursor__ball--small  circle { fill: #f7f8fa; }
+
+/* ── Header / nav ── */
+.header {
+  display: flex;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 3.5rem 10%;
+  /*background-color: #070707d5;*/
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: League Spartan;
+  font-weight: Regular;
+  background-color: #1a1a1aab;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: tomato;
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: libre baskerville;
+  /* font-family: caveat; */
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6rem;
+  justify-content: center;
+}
+nav {
+height: 100%;
+display: flex;
+}
+.navbar > li > a {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  text-align: center;
+}
+.dropdown-menu li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 0;
+  height: 100%;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              
+  width: 0%;             
+  height: 100%;
+  background: #a82a2ad3;
+  z-index: -1;
+
+  transition: width 0.3s ease;
+}
+.dropdown-menu li a:hover::before {
+  width: 100%;           
+
+}
+.navbar li{
+  position: relative;
+  height: 100%;
+
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu { /*verticaly center nav and dropdown */
+  
+  position: absolute;
+  top: 100%;          /* directly under the li */
+  right: -1rem;
+  background: #2b2b2bd3;
+  list-style: none;
+  padding: 0;
+  min-width: 220px;
+
+  opacity: 0;
+  left: auto;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  pointer-events: none;
+  
+
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.navbar li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu li a{
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+/* ── Hero ── */
+.steam-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10%;
+  padding-top: 100px;
+  gap: 6rem;
+  position: relative;
+  overflow: hidden;
+  background: #0b1622;
+}
+
+.steam-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 50%, rgba(27,155,209,0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 80% at 0% 100%, rgba(27,155,209,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.steam-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(27,155,209,0.35), transparent);
+}
+
+.steam-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.steam-logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.steam-logo-svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.steam-logo-text {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  color: #1b9bd1;
+  text-transform: uppercase;
+}
+
+.steam-hero-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.steam-hero-sub {
+  font-size: 1.65rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  max-width: 42rem;
+  letter-spacing: 0.02rem;
+}
+
+.steam-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 1rem;
+}
+
+.steam-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.steam-meta-label {
+  font-size: 1.1rem;
+  letter-spacing: 0.3rem;
+  color: rgba(27,155,209,0.7);
+  text-transform: uppercase;
+}
+
+.steam-meta-value {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
+}
+
+.steam-meta-divider {
+  width: 1px;
+  height: 3.5rem;
+  background: rgba(255,255,255,0.1);
+}
+
+.steam-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Sections ── */
+.steam-section {
+  padding: 10rem 10%;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.steam-section-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.steam-section-header {
+  margin-bottom: 6rem;
+}
+
+.steam-num {
+  display: block;
+  font-size: 10rem;
+  font-weight: 800;
+  color: #1b9bd1;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  opacity: 0.85;
+}
+
+.steam-section-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.steam-section-rule {
+  width: 5rem;
+  height: 2px;
+  background: #1b9bd1;
+}
+
+/* ── Content splits ── */
+.steam-content-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.steam-content-split--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.steam-content-split--reverse .steam-text-block { order: 2; }
+.steam-content-split--reverse .steam-img-grid   { order: 1; }
+
+/* ── Text ── */
+.steam-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.steam-text-block--wide { max-width: 72rem; margin-bottom: 5rem; }
+
+.steam-body {
+  font-size: 1.65rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.02rem;
+}
+
+/* ── Image slots ── */
+.steam-img-slot {
+  position: relative;
+  background: #0f1f30;
+  border: 1px solid rgba(27,155,209,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.steam-img-slot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 12px,
+    rgba(27,155,209,0.04) 12px,
+    rgba(27,155,209,0.04) 13px
+  );
+}
+
+.steam-img-slot::after {
+  content: attr(data-label);
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  color: rgba(27,155,209,0.38);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.steam-img-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.steam-img-slot--phone {
+  aspect-ratio: 9 / 18;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.steam-img-slot--phone-sm {
+  aspect-ratio: 9 / 18;
+}
+
+.steam-img-slot--wide {
+  aspect-ratio: 21 / 9;
+  margin-top: 2rem;
+}
+
+.steam-img-slot--sketch {
+  aspect-ratio: 4 / 3;
+}
+
+/* ── Image grids ── */
+.steam-img-grid--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.steam-img-grid--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ── Process section ── */
+.steam-process-row {
+  margin-bottom: 6rem;
+}
+
+.steam-sub-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  color: rgba(27,155,209,0.75);
+  margin-bottom: 2.5rem;
+}
+
+/* ── Style Guide ── */
+.steam-section--guide { padding-bottom: 14rem; }
+
+.steam-guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.steam-guide-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Typography cards */
+.steam-type-row {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.steam-type-card {
+  background: #0f1f30;
+  border: 1px solid rgba(27,155,209,0.12);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.steam-type-name {
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: #1b9bd1;
+  text-transform: uppercase;
+}
+
+.steam-type-weight {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.05rem;
+}
+
+.steam-type-sample {
+  font-size: 6.5rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.steam-type-sample--bold {
+  font-weight: 600;
+}
+
+/* Color swatches */
+.steam-color-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.steam-color-group-label {
+  font-size: 1.1rem;
+  letter-spacing: 0.25rem;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+.steam-color-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.steam-swatch {
+  width: 7rem;
+  height: 5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.steam-swatch::after {
+  content: attr(data-hex);
+  position: absolute;
+  bottom: -2.4rem;
+  left: 0;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  color: rgba(255,255,255,0.25);
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 5rem 10%;
+  margin-top: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  background: rgba(19,19,19,1);
+  bottom: 0;
+  left: 0;
+  padding: 5rem 10%;
+  margin-top: auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* margin-top: 2rem; */
+  gap: 2rem;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: League Spartan;
+  font-weight: Regular;
+  font-size: 3.8rem;
+  opacity: 1;
+  z-index: 10;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+  height: 27px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.contact a{  
+font-size: 1.8rem;
+color: white;
+margin-left: 4rem;
+font-weight: 500;
+font-family: League Spartan;
+}
+.artstation {
+  z-index: 10;
+}
+.page-link {
+    position: absolute;
+    display: block;
+    z-index: 1000; /* above page image */
+    cursor: pointer;
+    /* background: rgba(255, 0, 0, 0.3);
+    outline: 2px solid red;  */
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .steam-hero {
+    grid-template-columns: 1fr;
+    padding-top: 160px;
+    min-height: auto;
+    padding-bottom: 8rem;
+  }
+  .steam-hero-right { display: none; }
+  .steam-content-split { grid-template-columns: 1fr; gap: 4rem; }
+  .steam-content-split--reverse .steam-text-block,
+  .steam-content-split--reverse .steam-img-grid { order: unset; }
+  .steam-guide-grid { grid-template-columns: 1fr; gap: 5rem; }
+  .steam-num { font-size: 7.5rem; }
+  .steam-section-title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .steam-section { padding: 7rem 6%; }
+  .steam-hero { padding: 160px 6% 8rem; }
+  .steam-hero-title { font-size: 4.5rem; }
+  .steam-img-grid--3 { grid-template-columns: 1fr 1fr; }
+  .steam-hero-meta { flex-wrap: wrap; gap: 2rem; }
+  .steam-meta-divider { display: none; }
+  .steam-type-row { flex-direction: column; }
+}

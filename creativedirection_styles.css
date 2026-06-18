@@ -7,11 +7,12 @@
 }
 
 body {
-background-color: #FFFDFE;
+  color: #FFFFFF;
+  background-color: #aa0a0a;
 }
 
 section {
-  background-color: #FFFDFE;
+  background-color: #1A1A1A;
   position: relative;
 }
 
@@ -20,17 +21,10 @@ html {
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: "magicial game";
-  src: url("fonts/magicial_game/magicial_game.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
 .header {
   display: flex;
   position: fixed;
-  height: 120px;
+  height: 100px;
   width: 100%;
   top: 0;
   left: 0;
@@ -53,6 +47,7 @@ html {
   font-size: 3rem;
   color: rgb(255, 255, 255);
   font-family: libre baskerville;
+  /* font-family: caveat; */
   transition: 0.3s ease-in-out;
 }
 .logo:hover{
@@ -71,8 +66,8 @@ display: flex;
 }
 .navbar > li > a {
   display: flex;
-  align-items: center;     
-  justify-content: center; 
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
   color: white;
   font-size: 1.8rem;
   margin-left: 0;
@@ -126,11 +121,15 @@ display: flex;
   list-style: none;
   padding: 0;
   min-width: 220px;
+
   opacity: 0;
   left: auto;
   transform: translateY(-10px);
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
   pointer-events: none;
+  
+
+
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .navbar li:hover .dropdown-menu {
@@ -138,288 +137,18 @@ display: flex;
   transform: translateY(0);
   pointer-events: auto;
 }
+
 .dropdown-menu li a{
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
 }
-.landing_text {
-  max-width: 600px;
-  text-align: center;
-}
-.landing {
-  position: relative;
-  height: 100vh;
-  background-image: url(svgs/frieren_landing_bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  white-space: nowrap;
-  color: #ffffff;
-}
-.title p {
-  font-family: "magicial game", sans-serif;
-  font-size: 13rem;
-}
-.landing_text {
-  position: absolute;
-  bottom: 5rem;
-  left: 10%;
-  max-width: 600px;
-  color: #ffffff;
-  text-align: left;
-  font-family: libre baskerville;
-  font-style: italic;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-.landing_text p {
-  margin-bottom: 4rem;
-}
-.full_img-wrapper {
-  padding: 3.5rem 4%;
-}
-.three_hover {
-padding: 15rem 0rem;
-}
-.full_img{
-  display: flex;
-  position: relative;
-  gap: 15rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-}
-.hover_title {
-  padding: 3rem 5%;
-  font-family: libre baskerville;
-  font-style: italic;
-  font-size: 2.5rem;
-  color: #BF2929;
-  text-align: right;
-}
-.hover_text {
-  padding: 3rem 5%;
-  font-family: libre baskerville;
-  text-align: right;
-  font-size: 1.1rem;
-  color: #232323;
-}
-.hover_title_left {
-  padding: 3rem 5%;
-  font-family: libre baskerville;
-  font-style: italic;
-  font-size: 2.5rem;
-  color: #BF2929;
-  text-align: left;
-}
-.hover_text_left {
-  padding: 3rem 5%;
-  font-family: libre baskerville;
-  text-align: left;
-  font-size: 1.1rem;
-  color: #232323;
-}
-.hover{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;              
-  width: 20%;           
-  height: 100%;
 
-  background-color: #ffffffb7;
-  color: #ffffff;
-
-  font-size: 2rem;
-  font-family: League Spartan;
-  line-height: 1.6;
-  letter-spacing: 0.05rem;
-
-  padding: 2rem;
-
-  transform: translateX(100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-
-  opacity: 0;
-  z-index: 10;
-  backdrop-filter: blur(2px);
-}
-.hover_left{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;              
-  width: 20%;           
-  height: 100%;
-
-  background-color: #ffffffb7;
-  color: #ffffff;
-
-  font-size: 2rem;
-  font-family: League Spartan;
-  line-height: 1.6;
-  letter-spacing: 0.05rem;
-
-  padding: 2rem;
-
-  transform: translateX(-100%); 
-  transition: transform 0.3s ease, opacity 0.3s ease;
-
-  opacity: 0;
-  z-index: 10;
-  backdrop-filter: blur(2px);
-}
-.hover_container{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    overflow: hidden;
-}
-.hover_container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.hover_container:hover .hover{
-    transform: translateX(0);
-    opacity: 1;
-}
-.hover_container:hover .hover_left {
-  transform: translateX(0);
-  opacity: 1;
+section {
+  min-height: 100vh;
+  padding: 4rem 10%;
 }
 
-.swiper {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 80px 0;
-  overflow: visible;
-}
-
-.swiper-slide {
-  width: auto;
-  flex-shrink: 0; 
-  height: 700px;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-  transition: none;
-  /* margin-bottom: 5%; */
-}
-
-.swiper-slide::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #473e3e;
-  mix-blend-mode: multiply;
-  opacity: 1;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.swiper-slide.swiper-slide-active {
-  z-index: 10;
-}
-
-.swiper-slide.swiper-slide-active::after {
-  opacity: 0;
-}
-
-.swiper-slide.swiper-slide-prev,
-.swiper-slide.swiper-slide-next {
-  z-index: 5;
-}
-
-.swiper-slide.swiper-slide-prev::after,
-.swiper-slide.swiper-slide-next::after {
-  opacity: 0.5;
-}
-
-.swiper-slide img {
-  width: auto !important;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  background: rgba(0,0,0,0.3);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  opacity: 1;
-}
-.swiper-pagination {
-    position: relative;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-}
-
-.swiper-pagination-bullet {
-    background: #232323;
-    opacity: 0.3;
-    width: 8px;
-    height: 8px;
-}
-
-.swiper-pagination-bullet-active {
-    background: #BF2929;
-    opacity: 1;
-}
-.r1, .r2 {
-    display: flex;
-    margin: 0 auto 3rem;
-}
-
-.r1 {
-    
-    height: 70vh;
-    gap: 2%;
-    padding: 0 10%;
-}
-
-.r2 {
-    padding: 0 10%;
-    height: 80vh;
-    gap: 2%;
-}
-
-.photo {
-    flex: 0 0 49%;
-    overflow: hidden;
-}
-
-.photo2 {
-    flex: 1;
-    overflow: hidden;
-}
-
-.photo img, .photo2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -447,6 +176,7 @@ padding: 15rem 0rem;
   font-weight: Regular;
   font-size: 5rem;
   opacity: 1;
+  z-index: 10;
 }
 
 .icon_links {
@@ -460,7 +190,6 @@ padding: 15rem 0rem;
   align-items: center;
   gap: 4rem;
 }
-
 .contact a{  
 font-size: 1.8rem;
 color: white;
@@ -468,37 +197,6 @@ margin-left: 4rem;
 font-weight: 500;
 font-family: League Spartan;
 }
-
-@media (min-width: 2000px) {
-  .hover_title,
-  .hover_title_left {
-    font-size: 3rem;
-  }
-  .hover_text,
-  .hover_text_left {
-    font-size: 1.5rem;
-  }
-  .landing_text {
-    font-size: 1.6rem;
-  }
-  .title p {
-    font-size: 17rem;
-  }
-  .title p {
-    font-family: "magicial game", sans-serif;
-    font-size: 17rem;
-    
-  }
-  .landing_text {
-    position: absolute;
-    bottom: 5rem;
-    left: 10%;
-    max-width: 1000px;
-
-    text-align: left;
-    font-family: libre baskerville;
-    font-style: italic;
-    font-size: 2.2rem;
-    line-height: 1.5;
-  }
+.artstation {
+  z-index: 10;
 }
